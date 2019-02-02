@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <!-- Css -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-<!-- Javascript -->
-    <script src="assets/javascript/app.js"></script>
+  
 </head>
-
-
 
 <body>
 <!-- Start container -->
@@ -41,7 +38,7 @@
           <div class="nav-wrapper">
             <form>
               <div class="input-field">
-                <input id="search" type="search" required>
+                <input id="city" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
               </div>
@@ -51,6 +48,19 @@
       </div>
     </div>
   </div>
+  
+          <!-- Icon div for Weather API-->
+    <div id="icon">
+        <img id="weather-icon" src="" alt="Weather icon">
+    </div>
+
+
+        <!-- Searchbar and Submit Button -->
+    <form action="submit">
+             City name:<br>
+             <input type="text" id="city"><br>
+             <input type="submit" value="Submit" id="submit-btn">
+         </form>
 
 
 
@@ -61,6 +71,11 @@
   crossorigin="anonymous">
     </script>
 
-    
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="assets/javascript/app.js"></script>
+
 </body>
 </html>
