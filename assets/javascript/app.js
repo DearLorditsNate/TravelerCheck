@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    /*
+    =======================================
+    Global Variables
+    =======================================
+    */
+
+    var currencyCode;
+    var currencyName;
+
 
     /*
     =======================================
@@ -24,7 +33,8 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
+            // Gets country code
+            var countryCode = response.sys.country;
 
             //Logs Country Code
             console.log(response.sys.country);
@@ -55,7 +65,8 @@ $(document).ready(function () {
             */
             var exchangeURL = "https://openexchangerates.org/api/latest.json?app_id=d598f2604826443ebf4e5fef59e51d90";
 
-            var currencyCode = "USD";
+            // Get currency code and name
+            getCurrency(countryCode, countryToCurrency);
 
             $.ajax({
                 url: exchangeURL,
@@ -63,12 +74,34 @@ $(document).ready(function () {
             }).then(function (response) {
                 for (i in response.rates) {
                     if (i === currencyCode) {
-                        console.log(response.rates[i]);
+                        // Empties old calculation
+                        $("#currency").empty();
+
+                        // Stores new rate
+                        var $currentRate = $("<p>").text(response.rates[i] + " " + currencyName);
+
+                        // Appends rate to the DOM
+                        $("#currency").append($currentRate);
                     }
                 }
             });
-
-
         });
     });
+
+    /*
+    =======================================
+    Function Declarations
+    =======================================
+    */
+
+    // Find Currency Code from Country Code
+    function getCurrency(countryCode, countryToCurrency) {
+        for (i in countryToCurrency) {
+            if (i === countryCode) {
+                currencyCode = countryToCurrency[i].Code;
+                currencyName = countryToCurrency[i].Currency;
+            }
+        }
+    }
+
 });
