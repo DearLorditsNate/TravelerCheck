@@ -50,7 +50,7 @@ $(document).ready(function () {
             Exchange Rate API Call
             =======================================
             */
-            var exchangeURL = "http://data.fixer.io/api/latest?access_key=98edce21485991d44325a63f98401c19"
+            var exchangeURL = "https://openexchangerates.org/api/latest.json?app_id=d598f2604826443ebf4e5fef59e51d90";
 
             var currencyCode = "USD";
 
@@ -67,8 +67,5 @@ $(document).ready(function () {
 
 
         });
-
-    })
-
-
+    });
 });
