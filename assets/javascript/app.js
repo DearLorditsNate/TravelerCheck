@@ -1,18 +1,74 @@
-$(document).ready(function() {
-    
-    var exchangeURL = "http://data.fixer.io/api/latest?access_key=98edce21485991d44325a63f98401c19"
+$(document).ready(function () {
 
-    var currencyCode = "USD";
 
-    $.ajax({
-        url: exchangeURL,
-        method: "GET"
-    }).then(function(response) {
-        for (i in response) {
-            if (i === currencyCode) {
-                console.log(response.rates[i]);
-            }
-        }
-    });
+    /*
+    =======================================
+    OpenWeather API Call
+    =======================================
+    */
 
-})
+    $("#search").on("click", function () {
+
+        event.preventDefault();
+
+        var fahrenheit = "&units=imperial";
+
+        var city = $("#city").val();
+        var apiKey = "c7ff544129cc1648ae3d73196115dbe7";
+        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + fahrenheit + "&APPID=" + apiKey;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+
+            //Logs Country Code
+            console.log(response.sys.country);
+
+            //Logs Weather
+            console.log(response.weather[0].description);
+
+            console.log(response.main.humidity);
+
+            console.log(response.main.temp);
+            console.log(response.main.temp_min);
+            console.log(response.main.temp_max);
+
+
+            //Logs UNIX Date and Time
+            console.log(response.dt);
+
+            //Weather Icons
+            var iconcode = response.weather[0].icon;
+            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            $('#weather-icon').attr('src', iconurl);
+
+
+            /*
+            =======================================
+            Exchange Rate API Call
+            =======================================
+            */
+            var exchangeURL = "http://data.fixer.io/api/latest?access_key=98edce21485991d44325a63f98401c19"
+
+            var currencyCode = "USD";
+
+            $.ajax({
+                url: exchangeURL,
+                method: "GET"
+            }).then(function (response) {
+                for (i in response.rates) {
+                    if (i === currencyCode) {
+                        console.log(response.rates[i]);
+                    }
+                }
+            });
+
+
+        });
+
+    })
+
+
+});
