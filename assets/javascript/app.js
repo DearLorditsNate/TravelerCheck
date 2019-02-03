@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
 
-    // Weather API ajax calls
+    /*
+    =======================================
+    OpenWeather API Call
+    =======================================
+    */
 
-
-    $("#submit-btn").on("click", function () {
+    $("#search").on("click", function () {
 
         event.preventDefault();
 
@@ -40,11 +43,29 @@ $(document).ready(function () {
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
             $('#weather-icon').attr('src', iconurl);
-        
+
+
+            /*
+            =======================================
+            Exchange Rate API Call
+            =======================================
+            */
+            var exchangeURL = "https://openexchangerates.org/api/latest.json?app_id=d598f2604826443ebf4e5fef59e51d90";
+
+            var currencyCode = "USD";
+
+            $.ajax({
+                url: exchangeURL,
+                method: "GET"
+            }).then(function (response) {
+                for (i in response.rates) {
+                    if (i === currencyCode) {
+                        console.log(response.rates[i]);
+                    }
+                }
+            });
+
 
         });
-
-    })
-
-
+    });
 });
