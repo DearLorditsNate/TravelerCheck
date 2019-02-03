@@ -17,6 +17,9 @@ $(document).ready(function () {
         var apiKey = "c7ff544129cc1648ae3d73196115dbe7";
         var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + fahrenheit + "&APPID=" + apiKey;
 
+        // Clear input field
+        $("#city").val("");
+
         $.ajax({
             url: queryURL,
             method: "GET"

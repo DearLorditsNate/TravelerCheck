@@ -1,0 +1,16 @@
+form {
+    margin-top: 30px;
+}
+
+#city {
+    border: 1px solid grey;
+    border-radius: 40px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#search {
+    width: 200px;
+    height: 75px;
+    font-size: 25px;
+}
