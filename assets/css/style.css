@@ -1,0 +1,49 @@
+body {
+    background-image: url("ocean.jpg");
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+   }
+
+
+form {
+    margin-top: 30px;
+}
+
+#city {
+    border: 1px solid gray;
+    border-radius: 40px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#placeholder {
+    color: gray;
+}
+
+#search {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+#current-rate {
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
