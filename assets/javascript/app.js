@@ -72,6 +72,8 @@ $(document).ready(function () {
 
             console.log("Lang code: " + langCode);
             console.log("Lang name: " + langName);
+            console.log("Currency code: " + currencyCode);
+            console.log("Currency name: " + currencyName);
 
             $.ajax({
                 url: exchangeURL,
@@ -103,8 +105,8 @@ $(document).ready(function () {
     function getCodes(countryCode, countryToCode) {
         for (i in countryToCode) {
             if (i === countryCode) {
-                currencyCode = countryToCode[i].Code;
-                currencyName = countryToCode[i].Currency;
+                currencyCode = countryToCode[i].CurrencyCode;
+                currencyName = countryToCode[i].CurrencyName;
                 langCode = countryToCode[i].LangCode;
                 langName = countryToCode[i].LangName;
             }
