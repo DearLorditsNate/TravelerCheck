@@ -8,6 +8,8 @@ $(document).ready(function () {
 
     var currencyCode;
     var currencyName;
+    var langCode;
+    var langName;
 
 
     /*
@@ -66,7 +68,12 @@ $(document).ready(function () {
             var exchangeURL = "https://openexchangerates.org/api/latest.json?app_id=d598f2604826443ebf4e5fef59e51d90";
 
             // Get currency code and name
-            getCurrency(countryCode, countryToCurrency);
+            getCodes(countryCode, countryToCode);
+
+            console.log("Lang code: " + langCode);
+            console.log("Lang name: " + langName);
+            console.log("Currency code: " + currencyCode);
+            console.log("Currency name: " + currencyName);
 
             $.ajax({
                 url: exchangeURL,
@@ -95,11 +102,13 @@ $(document).ready(function () {
     */
 
     // Find Currency Code from Country Code
-    function getCurrency(countryCode, countryToCurrency) {
-        for (i in countryToCurrency) {
+    function getCodes(countryCode, countryToCode) {
+        for (i in countryToCode) {
             if (i === countryCode) {
-                currencyCode = countryToCurrency[i].Code;
-                currencyName = countryToCurrency[i].Currency;
+                currencyCode = countryToCode[i].CurrencyCode;
+                currencyName = countryToCode[i].CurrencyName;
+                langCode = countryToCode[i].LangCode;
+                langName = countryToCode[i].LangName;
             }
         }
     }

@@ -1,990 +1,1484 @@
-var countryToCurrency = {
+var countryToCode = {
     "NZ": {
-        "Currency": "New Zealand Dollars",
-            "Code": "NZD"
+        "CurrencyName": "New Zealand Dollars",
+        "CurrencyCode": "NZD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "CK": {
-        "Currency": "New Zealand Dollars",
-            "Code": "NZD"
+        "CurrencyName": "New Zealand Dollars",
+        "CurrencyCode": "NZD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "NU": {
-        "Currency": "New Zealand Dollars",
-            "Code": "NZD"
+        "CurrencyName": "New Zealand Dollars",
+        "CurrencyCode": "NZD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "PN": {
-        "Currency": "New Zealand Dollars",
-            "Code": "NZD"
+        "CurrencyName": "New Zealand Dollars",
+        "CurrencyCode": "NZD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "TK": {
-        "Currency": "New Zealand Dollars",
-            "Code": "NZD"
+        "CurrencyName": "New Zealand Dollars",
+        "CurrencyCode": "NZD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AU": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "CX": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "CC": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "HM": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "KI": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "NR": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "NF": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "TV": {
-        "Currency": "Australian Dollars",
-            "Code": "AUD"
+        "CurrencyName": "Australian Dollars",
+        "CurrencyCode": "AUD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AS": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AD": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "ca",
+        "LangName": "Catalan"
     },
     "AT": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "de",
+        "LangName": "German"
     },
     "BE": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "nl",
+        "LangName": "Dutch"
     },
     "FI": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fi",
+        "LangName": "Finnish"
     },
     "FR": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GF": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "TF": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "DE": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "de",
+        "LangName": "German"
     },
     "GR": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "el",
+        "LangName": "Greek"
     },
     "GP": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "IE": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "ga",
+        "LangName": "Irish"
     },
     "IT": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "it",
+        "LangName": "Italian"
     },
     "LU": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "lb",
+        "LangName": "Luxembourgish"
     },
     "MQ": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "YT": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "MC": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "NL": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "nl",
+        "LangName": "Dutch"
     },
     "PT": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "RE": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "WS": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "SM": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "it",
+        "LangName": "Italian"
     },
     "SI": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "sl",
+        "LangName": "Slovenian"
     },
     "ES": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "VA": {
-        "Currency": "Euros",
-            "Code": "EUR"
+        "CurrencyName": "Euros",
+        "CurrencyCode": "EUR",
+        "LangCode": "it",
+        "LangName": "Italian"
     },
     "GS": {
-        "Currency": "Sterling",
-            "Code": "GBP"
+        "CurrencyName": "Sterling",
+        "CurrencyCode": "GBP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GB": {
-        "Currency": "Sterling",
-            "Code": "GBP"
+        "CurrencyName": "Sterling",
+        "CurrencyCode": "GBP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "JE": {
-        "Currency": "Sterling",
-            "Code": "GBP"
+        "CurrencyName": "Sterling",
+        "CurrencyCode": "GBP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "IO": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GU": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MH": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "FM": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MP": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "PW": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "PR": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "TC": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "US": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "UM": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "VG": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "VI": {
-        "Currency": "USD",
-            "Code": "USD"
+        "CurrencyName": "USD",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "HK": {
-        "Currency": "HKD",
-            "Code": "HKD"
+        "CurrencyName": "HKD",
+        "CurrencyCode": "HKD",
+        "LangCode": "zh",
+        "LangName": "Chinese"
     },
     "CA": {
-        "Currency": "Canadian Dollar",
-            "Code": "CAD"
+        "CurrencyName": "Canadian Dollar",
+        "CurrencyCode": "CAD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "JP": {
-        "Currency": "Japanese Yen",
-            "Code": "JPY"
+        "CurrencyName": "Japanese Yen",
+        "CurrencyCode": "JPY",
+        "LangCode": "ja",
+        "LangName": "Japanese"
     },
     "AF": {
-        "Currency": "Afghani",
-            "Code": "AFN"
+        "CurrencyName": "Afghani",
+        "CurrencyCode": "AFN",
+        "LangCode": "fa",
+        "LangName": "Persian"
     },
     "AL": {
-        "Currency": "Lek",
-            "Code": "ALL"
+        "CurrencyName": "Lek",
+        "CurrencyCode": "ALL",
+        "LangCode": "sq",
+        "LangName": "Albanian"
     },
     "DZ": {
-        "Currency": "Algerian Dinar",
-            "Code": "DZD"
+        "CurrencyName": "Algerian Dinar",
+        "CurrencyCode": "DZD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "AI": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AG": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "DM": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GD": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MS": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "KN": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "LC": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "VC": {
-        "Currency": "East Caribbean Dollar",
-            "Code": "XCD"
+        "CurrencyName": "East Caribbean Dollar",
+        "CurrencyCode": "XCD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AR": {
-        "Currency": "Peso",
-            "Code": "ARS"
+        "CurrencyName": "Peso",
+        "CurrencyCode": "ARS",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "AM": {
-        "Currency": "Dram",
-            "Code": "AMD"
+        "CurrencyName": "Dram",
+        "CurrencyCode": "AMD",
+        "LangCode": "hy",
+        "LangName": "Armenian"
     },
     "AW": {
-        "Currency": "Netherlands Antilles Guilder",
-            "Code": "ANG"
+        "CurrencyName": "Netherlands Antilles Guilder",
+        "CurrencyCode": "ANG",
+        "LangCode": "nl",
+        "LangName": "Dutch"
     },
     "AN": {
-        "Currency": "Netherlands Antilles Guilder",
-            "Code": "ANG"
+        "CurrencyName": "Netherlands Antilles Guilder",
+        "CurrencyCode": "ANG",
+        "LangCode": "nl",
+        "LangName": "Dutch"
     },
     "AZ": {
-        "Currency": "Manat",
-            "Code": "AZN"
+        "CurrencyName": "Manat",
+        "CurrencyCode": "AZN",
+        "LangCode": "az",
+        "LangName": "Azerbaijan"
     },
     "BS": {
-        "Currency": "Bahamian Dollar",
-            "Code": "BSD"
+        "CurrencyName": "Bahamian Dollar",
+        "CurrencyCode": "BSD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "BH": {
-        "Currency": "Bahraini Dinar",
-            "Code": "BHD"
+        "CurrencyName": "Bahraini Dinar",
+        "CurrencyCode": "BHD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "BD": {
-        "Currency": "Taka",
-            "Code": "BDT"
+        "CurrencyName": "Taka",
+        "CurrencyCode": "BDT",
+        "LangCode": "bn",
+        "LangName": "Bengali"
     },
     "BB": {
-        "Currency": "Barbadian Dollar",
-            "Code": "BBD"
+        "CurrencyName": "Barbadian Dollar",
+        "CurrencyCode": "BBD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "BY": {
-        "Currency": "Belarus Ruble",
-            "Code": "BYR"
+        "CurrencyName": "Belarus Ruble",
+        "CurrencyCode": "BYR",
+        "LangCode": "be",
+        "LangName": "Belarusian"
     },
     "BZ": {
-        "Currency": "Belizean Dollar",
-            "Code": "BZD"
+        "CurrencyName": "Belizean Dollar",
+        "CurrencyCode": "BZD",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "BJ": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "BF": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GW": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "CI": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "ML": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "NE": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "SN": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "TG": {
-        "Currency": "CFA Franc BCEAO",
-            "Code": "XOF"
+        "CurrencyName": "CFA Franc BCEAO",
+        "CurrencyCode": "XOF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "BM": {
-        "Currency": "Bermudian Dollar",
-            "Code": "BMD"
+        "CurrencyName": "Bermudian Dollar",
+        "CurrencyCode": "BMD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "BT": {
-        "Currency": "Indian Rupee",
-            "Code": "INR"
+        "CurrencyName": "Indian Rupee",
+        "CurrencyCode": "INR",
+        "LangCode": "hi",
+        "LangName": "Hindi"
     },
     "IN": {
-        "Currency": "Indian Rupee",
-            "Code": "INR"
+        "CurrencyName": "Indian Rupee",
+        "CurrencyCode": "INR",
+        "LangCode": "hi",
+        "LangName": "Hindi"
     },
     "BO": {
-        "Currency": "Boliviano",
-            "Code": "BOB"
+        "CurrencyName": "Boliviano",
+        "CurrencyCode": "BOB",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "BW": {
-        "Currency": "Pula",
-            "Code": "BWP"
+        "CurrencyName": "Pula",
+        "CurrencyCode": "BWP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "BV": {
-        "Currency": "Norwegian Krone",
-            "Code": "NOK"
+        "CurrencyName": "Norwegian Krone",
+        "CurrencyCode": "NOK",
+        "LangCode": "no",
+        "LangName": "Norwegian"
     },
     "NO": {
-        "Currency": "Norwegian Krone",
-            "Code": "NOK"
+        "CurrencyName": "Norwegian Krone",
+        "CurrencyCode": "NOK",
+        "LangCode": "no",
+        "LangName": "Norwegian"
     },
     "SJ": {
-        "Currency": "Norwegian Krone",
-            "Code": "NOK"
+        "CurrencyName": "Norwegian Krone",
+        "CurrencyCode": "NOK",
+        "LangCode": "no",
+        "LangName": "Norwegian"
     },
     "BR": {
-        "Currency": "Brazil",
-            "Code": "BRL"
+        "CurrencyName": "Brazil",
+        "CurrencyCode": "BRL",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "BN": {
-        "Currency": "Bruneian Dollar",
-            "Code": "BND"
+        "CurrencyName": "Bruneian Dollar",
+        "CurrencyCode": "BND",
+        "LangCode": "ms",
+        "LangName": "Malay"
     },
     "BG": {
-        "Currency": "Lev",
-            "Code": "BGN"
+        "CurrencyName": "Lev",
+        "CurrencyCode": "BGN",
+        "LangCode": "bg",
+        "LangName": "Bulgarian"
     },
     "BI": {
-        "Currency": "Burundi Franc",
-            "Code": "BIF"
+        "CurrencyName": "Burundi Franc",
+        "CurrencyCode": "BIF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "KH": {
-        "Currency": "Riel",
-            "Code": "KHR"
+        "CurrencyName": "Riel",
+        "CurrencyCode": "KHR",
+        "LangCode": "km",
+        "LangName": "Khmer"
     },
     "CM": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "CF": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "TD": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "CG": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GQ": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GA": {
-        "Currency": "CFA Franc BEAC",
-            "Code": "XAF"
+        "CurrencyName": "CFA Franc BEAC",
+        "CurrencyCode": "XAF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "CV": {
-        "Currency": "Escudo",
-            "Code": "CVE"
+        "CurrencyName": "Escudo",
+        "CurrencyCode": "CVE",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "KY": {
-        "Currency": "Caymanian Dollar",
-            "Code": "KYD"
+        "CurrencyName": "Caymanian Dollar",
+        "CurrencyCode": "KYD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "CL": {
-        "Currency": "Chilean Peso",
-            "Code": "CLP"
+        "CurrencyName": "Chilean Peso",
+        "CurrencyCode": "CLP",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "CN": {
-        "Currency": "Yuan Renminbi",
-            "Code": "CNY"
+        "CurrencyName": "Yuan Renminbi",
+        "CurrencyCode": "CNY",
+        "LangCode": "zh",
+        "LangName": "Chinese"
     },
     "CO": {
-        "Currency": "Peso",
-            "Code": "COP"
+        "CurrencyName": "Peso",
+        "CurrencyCode": "COP",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "KM": {
-        "Currency": "Comoran Franc",
-            "Code": "KMF"
+        "CurrencyName": "Comoran Franc",
+        "CurrencyCode": "KMF",
+        "LangCode": "sw",
+        "LangName": "Swahili"
     },
     "CD": {
-        "Currency": "Congolese Frank",
-            "Code": "CDF"
+        "CurrencyName": "Congolese Frank",
+        "CurrencyCode": "CDF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "CR": {
-        "Currency": "Costa Rican Colon",
-            "Code": "CRC"
+        "CurrencyName": "Costa Rican Colon",
+        "CurrencyCode": "CRC",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "HR": {
-        "Currency": "Croatian Dinar",
-            "Code": "HRK"
+        "CurrencyName": "Croatian Dinar",
+        "CurrencyCode": "HRK",
+        "LangCode": "hr",
+        "LangName": "Croatian"
     },
     "CU": {
-        "Currency": "Cuban Peso",
-            "Code": "CUP"
+        "CurrencyName": "Cuban Peso",
+        "CurrencyCode": "CUP",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "CY": {
-        "Currency": "Cypriot Pound",
-            "Code": "CYP"
+        "CurrencyName": "Cypriot Pound",
+        "CurrencyCode": "CYP",
+        "LangCode": "el",
+        "LangName": "Greek"
     },
     "CZ": {
-        "Currency": "Koruna",
-            "Code": "CZK"
+        "CurrencyName": "Koruna",
+        "CurrencyCode": "CZK",
+        "LangCode": "cs",
+        "LangName": "Czech"
     },
     "DK": {
-        "Currency": "Danish Krone",
-            "Code": "DKK"
+        "CurrencyName": "Danish Krone",
+        "CurrencyCode": "DKK",
+        "LangCode": "da",
+        "LangName": "Danish"
     },
     "FO": {
-        "Currency": "Danish Krone",
-            "Code": "DKK"
+        "CurrencyName": "Danish Krone",
+        "CurrencyCode": "DKK",
+        "LangCode": "da",
+        "LangName": "Danish"
     },
     "GL": {
-        "Currency": "Danish Krone",
-            "Code": "DKK"
+        "CurrencyName": "Danish Krone",
+        "CurrencyCode": "DKK",
+        "LangCode": "da",
+        "LangName": "Danish"
     },
     "DJ": {
-        "Currency": "Djiboutian Franc",
-            "Code": "DJF"
+        "CurrencyName": "Djiboutian Franc",
+        "CurrencyCode": "DJF",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "DO": {
-        "Currency": "Dominican Peso",
-            "Code": "DOP"
+        "CurrencyName": "Dominican Peso",
+        "CurrencyCode": "DOP",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "TP": {
-        "Currency": "Indonesian Rupiah",
-            "Code": "IDR"
+        "CurrencyName": "Indonesian Rupiah",
+        "CurrencyCode": "IDR",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "ID": {
-        "Currency": "Indonesian Rupiah",
-            "Code": "IDR"
+        "CurrencyName": "Indonesian Rupiah",
+        "CurrencyCode": "IDR",
+        "LangCode": "id",
+        "LangName": "Indonesian"
     },
     "EC": {
-        "Currency": "Sucre",
-            "Code": "ECS"
+        "CurrencyName": "Sucre",
+        "CurrencyCode": "ECS",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "EG": {
-        "Currency": "Egyptian Pound",
-            "Code": "EGP"
+        "CurrencyName": "Egyptian Pound",
+        "CurrencyCode": "EGP",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "SV": {
-        "Currency": "Salvadoran Colon",
-            "Code": "SVC"
+        "CurrencyName": "Salvadoran Colon",
+        "CurrencyCode": "SVC",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "ER": {
-        "Currency": "Ethiopian Birr",
-            "Code": "ETB"
+        "CurrencyName": "Ethiopian Birr",
+        "CurrencyCode": "ETB",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "ET": {
-        "Currency": "Ethiopian Birr",
-            "Code": "ETB"
+        "CurrencyName": "Ethiopian Birr",
+        "CurrencyCode": "ETB",
+        "LangCode": "am",
+        "LangName": "Amharic"
     },
     "EE": {
-        "Currency": "Estonian Kroon",
-            "Code": "EEK"
+        "CurrencyName": "Estonian Kroon",
+        "CurrencyCode": "EEK",
+        "LangCode": "et",
+        "LangName": "Estonian"
     },
     "FK": {
-        "Currency": "Falkland Pound",
-            "Code": "FKP"
+        "CurrencyName": "Falkland Pound",
+        "CurrencyCode": "FKP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "FJ": {
-        "Currency": "Fijian Dollar",
-            "Code": "FJD"
+        "CurrencyName": "Fijian Dollar",
+        "CurrencyCode": "FJD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "PF": {
-        "Currency": "CFP Franc",
-            "Code": "XPF"
+        "CurrencyName": "CFP Franc",
+        "CurrencyCode": "XPF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "NC": {
-        "Currency": "CFP Franc",
-            "Code": "XPF"
+        "CurrencyName": "CFP Franc",
+        "CurrencyCode": "XPF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "WF": {
-        "Currency": "CFP Franc",
-            "Code": "XPF"
+        "CurrencyName": "CFP Franc",
+        "CurrencyCode": "XPF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GM": {
-        "Currency": "Dalasi",
-            "Code": "GMD"
+        "CurrencyName": "Dalasi",
+        "CurrencyCode": "GMD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GE": {
-        "Currency": "Lari",
-            "Code": "GEL"
+        "CurrencyName": "Lari",
+        "CurrencyCode": "GEL",
+        "LangCode": "ka",
+        "LangName": "Georgian"
     },
     "GI": {
-        "Currency": "Gibraltar Pound",
-            "Code": "GIP"
+        "CurrencyName": "Gibraltar Pound",
+        "CurrencyCode": "GIP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GT": {
-        "Currency": "Quetzal",
-            "Code": "GTQ"
+        "CurrencyName": "Quetzal",
+        "CurrencyCode": "GTQ",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "GN": {
-        "Currency": "Guinean Franc",
-            "Code": "GNF"
+        "CurrencyName": "Guinean Franc",
+        "CurrencyCode": "GNF",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "GY": {
-        "Currency": "Guyanaese Dollar",
-            "Code": "GYD"
+        "CurrencyName": "Guyanaese Dollar",
+        "CurrencyCode": "GYD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "HT": {
-        "Currency": "Gourde",
-            "Code": "HTG"
+        "CurrencyName": "Gourde",
+        "CurrencyCode": "HTG",
+        "LangCode": "ht",
+        "LangName": "Haitian (Creole)"
     },
     "HN": {
-        "Currency": "Lempira",
-            "Code": "HNL"
+        "CurrencyName": "Lempira",
+        "CurrencyCode": "HNL",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "HU": {
-        "Currency": "Forint",
-            "Code": "HUF"
+        "CurrencyName": "Forint",
+        "CurrencyCode": "HUF",
+        "LangCode": "hu",
+        "LangName": "Hungarian"
     },
     "IS": {
-        "Currency": "Icelandic Krona",
-            "Code": "ISK"
+        "CurrencyName": "Icelandic Krona",
+        "CurrencyCode": "ISK",
+        "LangCode": "is",
+        "LangName": "Icelandic"
     },
     "IR": {
-        "Currency": "Iranian Rial",
-            "Code": "IRR"
+        "CurrencyName": "Iranian Rial",
+        "CurrencyCode": "IRR",
+        "LangCode": "fa",
+        "LangName": "Persian"
     },
     "IQ": {
-        "Currency": "Iraqi Dinar",
-            "Code": "IQD"
+        "CurrencyName": "Iraqi Dinar",
+        "CurrencyCode": "IQD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "IL": {
-        "Currency": "Shekel",
-            "Code": "ILS"
+        "CurrencyName": "Shekel",
+        "CurrencyCode": "ILS",
+        "LangCode": "he",
+        "LangName": "Hebrew"
     },
     "JM": {
-        "Currency": "Jamaican Dollar",
-            "Code": "JMD"
+        "CurrencyName": "Jamaican Dollar",
+        "CurrencyCode": "JMD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "JO": {
-        "Currency": "Jordanian Dinar",
-            "Code": "JOD"
+        "CurrencyName": "Jordanian Dinar",
+        "CurrencyCode": "JOD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "KZ": {
-        "Currency": "Tenge",
-            "Code": "KZT"
+        "CurrencyName": "Tenge",
+        "CurrencyCode": "KZT",
+        "LangCode": "kk",
+        "LangName": "Kazakh"
     },
     "KE": {
-        "Currency": "Kenyan Shilling",
-            "Code": "KES"
+        "CurrencyName": "Kenyan Shilling",
+        "CurrencyCode": "KES",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "KP": {
-        "Currency": "Won",
-            "Code": "KPW"
+        "CurrencyName": "Won",
+        "CurrencyCode": "KPW",
+        "LangCode": "ko",
+        "LangName": "Korean"
     },
     "KR": {
-        "Currency": "Won",
-            "Code": "KRW"
+        "CurrencyName": "Won",
+        "CurrencyCode": "KRW",
+        "LangCode": "ko",
+        "LangName": "Korean"
     },
     "KW": {
-        "Currency": "Kuwaiti Dinar",
-            "Code": "KWD"
+        "CurrencyName": "Kuwaiti Dinar",
+        "CurrencyCode": "KWD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "KG": {
-        "Currency": "Som",
-            "Code": "KGS"
+        "CurrencyName": "Som",
+        "CurrencyCode": "KGS",
+        "LangCode": "ky",
+        "LangName": "Kyrgyz"
     },
     "LA": {
-        "Currency": "Lao kip",
-            "Code": "LAK"
+        "CurrencyName": "Lao kip",
+        "CurrencyCode": "LAK",
+        "LangCode": "lo",
+        "LangName": "Laotian"
     },
     "LV": {
-        "Currency": "Lat",
-            "Code": "LVL"
+        "CurrencyName": "Lat",
+        "CurrencyCode": "LVL",
+        "LangCode": "lv",
+        "LangName": "Latvian"
     },
     "LB": {
-        "Currency": "Lebanese Pound",
-            "Code": "LBP"
+        "CurrencyName": "Lebanese Pound",
+        "CurrencyCode": "LBP",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "LS": {
-        "Currency": "Loti",
-            "Code": "LSL"
+        "CurrencyName": "Loti",
+        "CurrencyCode": "LSL",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "LR": {
-        "Currency": "Liberian Dollar",
-            "Code": "LRD"
+        "CurrencyName": "Liberian Dollar",
+        "CurrencyCode": "LRD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "LY": {
-        "Currency": "Libyan Dinar",
-            "Code": "LYD"
+        "CurrencyName": "Libyan Dinar",
+        "CurrencyCode": "LYD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "LI": {
-        "Currency": "Swiss Franc",
-            "Code": "CHF"
+        "CurrencyName": "Swiss Franc",
+        "CurrencyCode": "CHF",
+        "LangCode": "de",
+        "LangName": "German"
     },
     "CH": {
-        "Currency": "Swiss Franc",
-            "Code": "CHF"
+        "CurrencyName": "Swiss Franc",
+        "CurrencyCode": "CHF",
+        "LangCode": "de",
+        "LangName": "German"
     },
     "LT": {
-        "Currency": "Lita",
-            "Code": "LTL"
+        "CurrencyName": "Lita",
+        "CurrencyCode": "LTL",
+        "LangCode": "lt",
+        "LangName": "Lithuanian"
     },
     "MO": {
-        "Currency": "Macanese pataca",
-            "Code": "MOP"
+        "CurrencyName": "Macanese pataca",
+        "CurrencyCode": "MOP",
+        "LangCode": "zh",
+        "LangName": "Chinese"
     },
     "MK": {
-        "Currency": "Denar",
-            "Code": "MKD"
+        "CurrencyName": "Denar",
+        "CurrencyCode": "MKD",
+        "LangCode": "mk",
+        "LangName": "Macedonian"
     },
     "MG": {
-        "Currency": "Malagasy Franc",
-            "Code": "MGA"
+        "CurrencyName": "Malagasy Franc",
+        "CurrencyCode": "MGA",
+        "LangCode": "mg",
+        "LangName": "Malagasy"
     },
     "MW": {
-        "Currency": "Malawian Kwacha",
-            "Code": "MWK"
+        "CurrencyName": "Malawian Kwacha",
+        "CurrencyCode": "MWK",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MY": {
-        "Currency": "Ringgit",
-            "Code": "MYR"
+        "CurrencyName": "Ringgit",
+        "CurrencyCode": "MYR",
+        "LangCode": "ms",
+        "LangName": "Malay"
     },
     "MV": {
-        "Currency": "Rufiyaa",
-            "Code": "MVR"
+        "CurrencyName": "Rufiyaa",
+        "CurrencyCode": "MVR",
+        "LangCode": "si",
+        "LangName": "Sinhala"
     },
     "MT": {
-        "Currency": "Maltese Lira",
-            "Code": "MTL"
+        "CurrencyName": "Maltese Lira",
+        "CurrencyCode": "MTL",
+        "LangCode": "mt",
+        "LangName": "Maltese"
     },
     "MR": {
-        "Currency": "Ouguiya",
-            "Code": "MRO"
+        "CurrencyName": "Ouguiya",
+        "CurrencyCode": "MRO",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "MU": {
-        "Currency": "Mauritian Rupee",
-            "Code": "MUR"
+        "CurrencyName": "Mauritian Rupee",
+        "CurrencyCode": "MUR",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MX": {
-        "Currency": "Peso",
-            "Code": "MXN"
+        "CurrencyName": "Peso",
+        "CurrencyCode": "MXN",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "MD": {
-        "Currency": "Leu",
-            "Code": "MDL"
+        "CurrencyName": "Leu",
+        "CurrencyCode": "MDL",
+        "LangCode": "ro",
+        "LangName": "Romanian"
     },
     "MN": {
-        "Currency": "Tugrik",
-            "Code": "MNT"
+        "CurrencyName": "Tugrik",
+        "CurrencyCode": "MNT",
+        "LangCode": "mn",
+        "LangName": "Mongolian"
     },
     "MA": {
-        "Currency": "Dirham",
-            "Code": "MAD"
+        "CurrencyName": "Dirham",
+        "CurrencyCode": "MAD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "EH": {
-        "Currency": "Dirham",
-            "Code": "MAD"
+        "CurrencyName": "Dirham",
+        "CurrencyCode": "MAD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MZ": {
-        "Currency": "Metical",
-            "Code": "MZN"
+        "CurrencyName": "Metical",
+        "CurrencyCode": "MZN",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "MM": {
-        "Currency": "Kyat",
-            "Code": "MMK"
+        "CurrencyName": "Kyat",
+        "CurrencyCode": "MMK",
+        "LangCode": "my",
+        "LangName": "Burmese"
     },
     "NA": {
-        "Currency": "Dollar",
-            "Code": "NAD"
+        "CurrencyName": "Dollar",
+        "CurrencyCode": "NAD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "NP": {
-        "Currency": "Nepalese Rupee",
-            "Code": "NPR"
+        "CurrencyName": "Nepalese Rupee",
+        "CurrencyCode": "NPR",
+        "LangCode": "ne",
+        "LangName": "Nepali"
     },
     "NI": {
-        "Currency": "Cordoba Oro",
-            "Code": "NIO"
+        "CurrencyName": "Cordoba Oro",
+        "CurrencyCode": "NIO",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "NG": {
-        "Currency": "Naira",
-            "Code": "NGN"
+        "CurrencyName": "Naira",
+        "CurrencyCode": "NGN",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "OM": {
-        "Currency": "Sul Rial",
-            "Code": "OMR"
+        "CurrencyName": "Sul Rial",
+        "CurrencyCode": "OMR",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "PK": {
-        "Currency": "Rupee",
-            "Code": "PKR"
+        "CurrencyName": "Rupee",
+        "CurrencyCode": "PKR",
+        "LangCode": "ur",
+        "LangName": "Urdu"
     },
     "PA": {
-        "Currency": "Balboa",
-            "Code": "PAB"
+        "CurrencyName": "Balboa",
+        "CurrencyCode": "PAB",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "PG": {
-        "Currency": "Kina",
-            "Code": "PGK"
+        "CurrencyName": "Kina",
+        "CurrencyCode": "PGK",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "PY": {
-        "Currency": "Guarani",
-            "Code": "PYG"
+        "CurrencyName": "Guarani",
+        "CurrencyCode": "PYG",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "PE": {
-        "Currency": "Nuevo Sol",
-            "Code": "PEN"
+        "CurrencyName": "Nuevo Sol",
+        "CurrencyCode": "PEN",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "PH": {
-        "Currency": "Peso",
-            "Code": "PHP"
+        "CurrencyName": "Peso",
+        "CurrencyCode": "PHP",
+        "LangCode": "tl",
+        "LangName": "Tagalog"
     },
     "PL": {
-        "Currency": "Zloty",
-            "Code": "PLN"
+        "CurrencyName": "Zloty",
+        "CurrencyCode": "PLN",
+        "LangCode": "pl",
+        "LangName": "Polish"
     },
     "QA": {
-        "Currency": "Rial",
-            "Code": "QAR"
+        "CurrencyName": "Rial",
+        "CurrencyCode": "QAR",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "RO": {
-        "Currency": "Leu",
-            "Code": "RON"
+        "CurrencyName": "Leu",
+        "CurrencyCode": "RON",
+        "LangCode": "ro",
+        "LangName": "Romanian"
     },
     "RU": {
-        "Currency": "Ruble",
-            "Code": "RUB"
+        "CurrencyName": "Ruble",
+        "CurrencyCode": "RUB",
+        "LangCode": "ru",
+        "LangName": "Russian"
     },
     "RW": {
-        "Currency": "Rwanda Franc",
-            "Code": "RWF"
+        "CurrencyName": "Rwanda Franc",
+        "CurrencyCode": "RWF",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "ST": {
-        "Currency": "Dobra",
-            "Code": "STD"
+        "CurrencyName": "Dobra",
+        "CurrencyCode": "STD",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "SA": {
-        "Currency": "Riyal",
-            "Code": "SAR"
+        "CurrencyName": "Riyal",
+        "CurrencyCode": "SAR",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "SC": {
-        "Currency": "Rupee",
-            "Code": "SCR"
+        "CurrencyName": "Rupee",
+        "CurrencyCode": "SCR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "SL": {
-        "Currency": "Leone",
-            "Code": "SLL"
+        "CurrencyName": "Leone",
+        "CurrencyCode": "SLL",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "SG": {
-        "Currency": "Dollar",
-            "Code": "SGD"
+        "CurrencyName": "Dollar",
+        "CurrencyCode": "SGD",
+        "LangCode": "ms",
+        "LangName": "Malay"
     },
     "SK": {
-        "Currency": "Koruna",
-            "Code": "SKK"
+        "CurrencyName": "Koruna",
+        "CurrencyCode": "SKK",
+        "LangCode": "sk",
+        "LangName": "Slovakian"
     },
     "SB": {
-        "Currency": "Solomon Islands Dollar",
-            "Code": "SBD"
+        "CurrencyName": "Solomon Islands Dollar",
+        "CurrencyCode": "SBD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "SO": {
-        "Currency": "Shilling",
-            "Code": "SOS"
+        "CurrencyName": "Shilling",
+        "CurrencyCode": "SOS",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "ZA": {
-        "Currency": "Rand",
-            "Code": "ZAR"
+        "CurrencyName": "Rand",
+        "CurrencyCode": "ZAR",
+        "LangCode": "af",
+        "LangName": "Afrikaans"
     },
     "LK": {
-        "Currency": "Rupee",
-            "Code": "LKR"
+        "CurrencyName": "Rupee",
+        "CurrencyCode": "LKR",
+        "LangCode": "si",
+        "LangName": "Sinhala"
     },
     "SD": {
-        "Currency": "Dinar",
-            "Code": "SDG"
+        "CurrencyName": "Dinar",
+        "CurrencyCode": "SDG",
+        "LangCode": "su",
+        "LangName": "Sundanese"
     },
     "SR": {
-        "Currency": "Surinamese Guilder",
-            "Code": "SRD"
+        "CurrencyName": "Surinamese Guilder",
+        "CurrencyCode": "SRD",
+        "LangCode": "nl",
+        "LangName": "Dutch"
     },
     "SZ": {
-        "Currency": "Lilangeni",
-            "Code": "SZL"
+        "CurrencyName": "Lilangeni",
+        "CurrencyCode": "SZL",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "SE": {
-        "Currency": "Krona",
-            "Code": "SEK"
+        "CurrencyName": "Krona",
+        "CurrencyCode": "SEK",
+        "LangCode": "sv",
+        "LangName": "Swedish"
     },
     "SY": {
-        "Currency": "Syrian Pound",
-            "Code": "SYP"
+        "CurrencyName": "Syrian Pound",
+        "CurrencyCode": "SYP",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "TW": {
-        "Currency": "Dollar",
-            "Code": "TWD"
+        "CurrencyName": "Dollar",
+        "CurrencyCode": "TWD",
+        "LangCode": "zh",
+        "LangName": "Chinese"
     },
     "TJ": {
-        "Currency": "Tajikistan Ruble",
-            "Code": "TJS"
+        "CurrencyName": "Tajikistan Ruble",
+        "CurrencyCode": "TJS",
+        "LangCode": "tg",
+        "LangName": "Tajik"
     },
     "TZ": {
-        "Currency": "Shilling",
-            "Code": "TZS"
+        "CurrencyName": "Shilling",
+        "CurrencyCode": "TZS",
+        "LangCode": "sw",
+        "LangName": "Swahili"
     },
     "TH": {
-        "Currency": "Baht",
-            "Code": "THB"
+        "CurrencyName": "Baht",
+        "CurrencyCode": "THB",
+        "LangCode": "th",
+        "LangName": "Thai"
     },
     "TO": {
-        "Currency": "PaÕanga",
-            "Code": "TOP"
+        "CurrencyName": "PaÕanga",
+        "CurrencyCode": "TOP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "TT": {
-        "Currency": "Trinidad and Tobago Dollar",
-            "Code": "TTD"
+        "CurrencyName": "Trinidad and Tobago Dollar",
+        "CurrencyCode": "TTD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "TN": {
-        "Currency": "Tunisian Dinar",
-            "Code": "TND"
+        "CurrencyName": "Tunisian Dinar",
+        "CurrencyCode": "TND",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "TR": {
-        "Currency": "Lira",
-            "Code": "TRY"
+        "CurrencyName": "Lira",
+        "CurrencyCode": "TRY",
+        "LangCode": "tr",
+        "LangName": "Turkish"
     },
     "TM": {
-        "Currency": "Manat",
-            "Code": "TMT"
+        "CurrencyName": "Manat",
+        "CurrencyCode": "TMT",
+        "LangCode": "ru",
+        "LangName": "Russian"
     },
     "UG": {
-        "Currency": "Shilling",
-            "Code": "UGX"
+        "CurrencyName": "Shilling",
+        "CurrencyCode": "UGX",
+        "LangCode": "sw",
+        "LangName": "Swahili"
     },
     "UA": {
-        "Currency": "Hryvnia",
-            "Code": "UAH"
+        "CurrencyName": "Hryvnia",
+        "CurrencyCode": "UAH",
+        "LangCode": "uk",
+        "LangName": "Ukrainian"
     },
     "AE": {
-        "Currency": "Dirham",
-            "Code": "AED"
+        "CurrencyName": "Dirham",
+        "CurrencyCode": "AED",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "UY": {
-        "Currency": "Peso",
-            "Code": "UYU"
+        "CurrencyName": "Peso",
+        "CurrencyCode": "UYU",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "UZ": {
-        "Currency": "Som",
-            "Code": "UZS"
+        "CurrencyName": "Som",
+        "CurrencyCode": "UZS",
+        "LangCode": "uz",
+        "LangName": "Uzbek"
     },
     "VU": {
-        "Currency": "Vatu",
-            "Code": "VUV"
+        "CurrencyName": "Vatu",
+        "CurrencyCode": "VUV",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "VE": {
-        "Currency": "Bolivar",
-            "Code": "VEF"
+        "CurrencyName": "Bolivar",
+        "CurrencyCode": "VEF",
+        "LangCode": "es",
+        "LangName": "Spanish"
     },
     "VN": {
-        "Currency": "Dong",
-            "Code": "VND"
+        "CurrencyName": "Dong",
+        "CurrencyCode": "VND",
+        "LangCode": "vi",
+        "LangName": "Vietnamese"
     },
     "YE": {
-        "Currency": "Rial",
-            "Code": "YER"
+        "CurrencyName": "Rial",
+        "CurrencyCode": "YER",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "ZM": {
-        "Currency": "Kwacha",
-            "Code": "ZMK"
+        "CurrencyName": "Kwacha",
+        "CurrencyCode": "ZMK",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "ZW": {
-        "Currency": "Zimbabwe Dollar",
-            "Code": "ZWD"
+        "CurrencyName": "Zimbabwe Dollar",
+        "CurrencyCode": "ZWD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "AX": {
-        "Currency": "Euro",
-            "Code": "EUR"
+        "CurrencyName": "Euro",
+        "CurrencyCode": "EUR",
+        "LangCode": "sv",
+        "LangName": "Swedish"
     },
     "AO": {
-        "Currency": "Angolan kwanza",
-            "Code": "AOA"
+        "CurrencyName": "Angolan kwanza",
+        "CurrencyCode": "AOA",
+        "LangCode": "pt",
+        "LangName": "Portuguese"
     },
     "AQ": {
-        "Currency": "Antarctican dollar",
-            "Code": "AQD"
+        "CurrencyName": "Antarctican dollar",
+        "CurrencyCode": "AQD",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "BA": {
-        "Currency": "Bosnia and Herzegovina convertible mark",
-            "Code": "BAM"
+        "CurrencyName": "Bosnia and Herzegovina convertible mark",
+        "CurrencyCode": "BAM",
+        "LangCode": "bs",
+        "LangName": "Bosnian"
     },
     "GH": {
-        "Currency": "Ghana cedi",
-            "Code": "GHS"
+        "CurrencyName": "Ghana cedi",
+        "CurrencyCode": "GHS",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "GG": {
-        "Currency": "Guernsey pound",
-            "Code": "GGP"
+        "CurrencyName": "Guernsey pound",
+        "CurrencyCode": "GGP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "IM": {
-        "Currency": "Manx pound",
-            "Code": "GBP"
+        "CurrencyName": "Manx pound",
+        "CurrencyCode": "GBP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "ME": {
-        "Currency": "Euro",
-            "Code": "EUR"
+        "CurrencyName": "Euro",
+        "CurrencyCode": "EUR",
+        "LangCode": "sr",
+        "LangName": "Serbian"
     },
     "PS": {
-        "Currency": "Jordanian dinar",
-            "Code": "JOD"
+        "CurrencyName": "Jordanian dinar",
+        "CurrencyCode": "JOD",
+        "LangCode": "ar",
+        "LangName": "Arabic"
     },
     "BL": {
-        "Currency": "Euro",
-            "Code": "EUR"
+        "CurrencyName": "Euro",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "SH": {
-        "Currency": "Saint Helena pound",
-            "Code": "GBP"
+        "CurrencyName": "Saint Helena pound",
+        "CurrencyCode": "GBP",
+        "LangCode": "en",
+        "LangName": "English"
     },
     "MF": {
-        "Currency": "Netherlands Antillean guilder",
-            "Code": "ANG"
+        "CurrencyName": "Netherlands Antillean guilder",
+        "CurrencyCode": "ANG",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "PM": {
-        "Currency": "Euro",
-            "Code": "EUR"
+        "CurrencyName": "Euro",
+        "CurrencyCode": "EUR",
+        "LangCode": "fr",
+        "LangName": "French"
     },
     "RS": {
-        "Currency": "Serbian dinar",
-            "Code": "RSD"
+        "CurrencyName": "Serbian dinar",
+        "CurrencyCode": "RSD",
+        "LangCode": "sr",
+        "LangName": "Serbian"
     },
     "USAF": {
-        "Currency": "US Dollar",
-            "Code": "USD"
+        "CurrencyName": "US Dollar",
+        "CurrencyCode": "USD",
+        "LangCode": "en",
+        "LangName": "English"
     }
 }
