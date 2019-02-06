@@ -30,6 +30,9 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+        // Empty Result DOM
+        $("#result").empty();
+
         var fahrenheit = "&units=imperial";
 
         var city = $("#city").val();
@@ -141,14 +144,20 @@ $(document).ready(function () {
     $("#convert").on("click", function() {
         event.preventDefault();
 
+        // Empty Result DOM
+        $("#result").empty();
+
         // Get user input
         var USD = $("#money").val();
 
+        // Calcualted result
+        var result = Math.round(USD * currentRate).toLocaleString();
+
         // Calculate amount in local currency
-        var $amountToBring = $("<p>").text(USD * currentRate);
+        var $amountToBring = $("<p>").text(result + " " + currencyName);
 
         // Print to DOM
-        $("#currency").append($amountToBring);
+        $("#result").append($amountToBring);
 
         // Clear user input
         $("#money").val("");
