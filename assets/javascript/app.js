@@ -33,8 +33,16 @@ $(document).ready(function () {
             console.log(response.main.temp_max);
 
 
-            //Logs UNIX Date and Time
+            //Logs UNIX timestamp
             console.log(response.dt);
+
+
+            //converts UNIX timestamp to Date and Time
+            
+
+
+
+
 
             //Weather Icons
             var iconcode = response.weather[0].icon;
