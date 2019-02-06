@@ -10,7 +10,14 @@ $(document).ready(function () {
     var currencyName;
     var langCode;
     var langName;
+    var translateText;
 
+    var phrases = [
+        "Where can I find an ATM?",
+        "Can you tell me where the bank is?",
+        "How much does a taxi cost?",
+        "Do you accept credit cards?"
+    ];
 
     /*
     =======================================
@@ -57,9 +64,6 @@ $(document).ready(function () {
             $('#icon').empty();
             $('#icon').append(image);
 
-
-
-
             /*
             =======================================
             Exchange Rate API Call
@@ -92,6 +96,29 @@ $(document).ready(function () {
                     }
                 }
             });
+
+            /*
+            =======================================
+            Translation API Call
+            =======================================
+            */
+            var translateKey = "trnsl.1.1.20190201T052022Z.ae090add23877f52.1b85d9520f4a032cb3316ad3fde315f2aad06966";
+            var translateURL;
+
+            $("#phrases").empty();
+
+            for (var i = 0; i < phrases.length; i++) {
+                translateText = phrases[i];
+                translateURL =
+                    "https://translate.yandex.net/api/v1.5/tr.json/translate?key=" +
+                    translateKey +
+                    "&text=" +
+                    translateText +
+                    "&lang=" +
+                    langCode;
+            
+                getTranslation(i, translateURL);
+            }
         });
     });
 
@@ -113,4 +140,16 @@ $(document).ready(function () {
         }
     }
 
+    function getTranslation(index, translateURL) {
+        $.ajax({
+            url: translateURL,
+            method: "GET"
+        }).then(function (response) {
+            var $engPhrase = $("<p>").text(phrases[index]);
+            var $translatedPhrase = $("<p>").text(response.text);
+            
+            $("#phrases").append($engPhrase).append($translatedPhrase);
+
+        });
+    }
 });
