@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>main Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Materialize CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Css -->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+
+
+<body>
+<!-- Start container -->
+  <div class="container">
+<!-- Header Row -->
+    <div class="row">
+      <div class="col s12">
+<!-- Search Bar -->
+        <form class="center-align">
+          <div class="form-group">
+            <input type="text" class="form-control" id="city" placeholder="Where are you going?">
+          </div>
+          <button type="submit" class="btn" id="search">Submit</button>
+        </form>
+      </div>
+    </div>
+<br><br><br>
+<!-- Content Row -->
+    <div class="row">
+<!-- Content Left -->
+      <div class="col s9">
+        <div class="row">
+<!-- Currency -->
+          <div class="col s6">Currency
+            <div class="card-panel blue">
+              <p class="white-text">
+                Current rate (to $1 USD):
+                <span class="white-text" id="currency">
+<!-- Currency Result Shown -->
+                  <form class="center-align">
+                    <div class="form-group">
+<br>
+                      <input class="white-text" type="text" class="form-control" id="current-rate" placeholder="">
+                    </div>
+                  </form>
+                </span>
+              </p>
+            </div>
+          </div>
+<!-- Phrases -->
+          <div class="col s6">Phrases
+            <div class="card-panel blue">
+              <span class="white-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              <br><br>
+              Aliquet sagittis id consectetur purus ut. 
+              <br><br>
+              A erat nam at lectus urna duis convallis convallis. 
+              <br><br>
+              Placerat duis ultricies lacus sed turpis tincidunt id aliquet. 
+              <br><br>
+              Fames ac turpis egestas integer eget aliquet.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Content Right -->
+      <div class="col s3">
+<!-- Weather -->
+        <div class="row">Weather
+          <div class="card-panel blue">
+            <span class="white-text">
+<!-- Icon div for Weather API-->
+              <div id="icon">
+                <img id="weather-icon" src="" alt="Weather icon">
+              </div>
+            </span>
+          </div>
+        </div>
+<!-- Time -->
+        <div class="row">Time
+          <div class="card-panel blue">
+            <span class="white-text">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+<!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Currency Codes -->
+  <script src="assets/javascript/currency_codes.js"></script>
+
+<!-- Javascript -->
+  <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
