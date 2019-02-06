@@ -21,7 +21,8 @@ form {
     margin-top: 50px;
 }
 
-#city {
+#city,
+#money {
     border-radius: 40px;
     padding: 15px;
     margin-top: 15px;
@@ -37,7 +38,8 @@ form {
     color: gray;
 }
 
-#search {
+#search,
+#convert {
     width: 100px;
     height: 50px;
     font-size: 15px;

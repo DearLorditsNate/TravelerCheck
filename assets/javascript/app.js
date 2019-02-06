@@ -45,14 +45,14 @@ $(document).ready(function () {
             // Gets country code
             var countryCode = response.sys.country;
 
+            // Gets city name
+            var cityName = response.name;
+
             //Logs Weather
-
             $("#description").text(response.weather[0].description)
-
 
             //logs humidity
             $("#humidity").text(response.main.humidity)
-
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
@@ -63,6 +63,12 @@ $(document).ready(function () {
             var image = $("<img>").attr("src", iconurl)
             $('#icon').empty();
             $('#icon').append(image);
+
+            // Clears location
+            $("#location").empty();
+
+            // Prints Location
+            $("#location").append(cityName + ", " + countryCode);
 
             /*
             =======================================
