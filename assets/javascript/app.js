@@ -107,8 +107,8 @@ $(document).ready(function () {
             */
             var translateKey = "trnsl.1.1.20190201T052022Z.ae090add23877f52.1b85d9520f4a032cb3316ad3fde315f2aad06966";
             var translateURL;
-            var $engPhrase;
-            var $translatedPhrase;
+
+            $("#phrases").empty();
 
             for (var i = 0; i < phrases.length; i++) {
                 translateText = phrases[i];
@@ -119,30 +119,9 @@ $(document).ready(function () {
                     translateText +
                     "&lang=" +
                     langCode;
-
-                $engPhrase = $("<p>").text(translateText).attr("id", i);
-                $translatedPhrase = $("<p>").attr("data-id", i);
-
-                $("#phrases").append($engPhrase).append($translatedPhrase);
             
-
-                $.ajax({
-                    url: translateURL,
-                    method: "GET"
-                }).then(function (response) {
-                    // var $translatedPhrase = $("<p>").text(response.text).attr("data-id", i);
-
-                    $("#phrases").attr();
-
-                });
-
+                getTranslation(i, translateURL);
             }
-
-
-
-
-
-
         });
     });
 
@@ -162,6 +141,20 @@ $(document).ready(function () {
                 langName = countryToCode[i].LangName;
             }
         }
+    }
+
+    function getTranslation(index, translateURL) {
+        $.ajax({
+            url: translateURL,
+            method: "GET"
+        }).then(function (response) {
+            var $engPhrase = $("<p>").text(phrases[index]);
+            var $translatedPhrase = $("<p>").text(response.text);
+            
+            $("#phrases").append($engPhrase).append($translatedPhrase);
+
+        });
+
     }
 
 });
