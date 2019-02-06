@@ -8,14 +8,17 @@ body {
 
 
 form {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 #city {
-    border: 1px solid gray;
     border-radius: 40px;
     padding: 15px;
     margin-bottom: 15px;
+    max-width: 100%;
+    background-color: white;
+    text-align: center;
+    font-size: 24px;
 }
 
 #placeholder {
@@ -23,27 +26,19 @@ form {
 }
 
 #search {
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
+    width: 200px;
+    height: 75px;
+    font-size: 25px;
+    border-radius: 40px;
 }
 
-.btn {
-    background-color: dodgerblue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 40px;
-  }
+body {
+    background-image: url("../images/boardwalk-buildings-cars-5256.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
-#current-rate {
-    border: 1px solid white;
-    border-radius: 40px;
-    padding: 5px;
-    margin-bottom: 5px;
+.test {
+    background-color: green;
 }
