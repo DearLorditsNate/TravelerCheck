@@ -38,34 +38,26 @@ $(document).ready(function () {
             // Gets country code
             var countryCode = response.sys.country;
 
-            //Logs Country Code
-            console.log(response.sys.country);
-
             //Logs Weather
-            console.log(response.weather[0].description);
 
-            console.log(response.main.humidity);
-
-            console.log(response.main.temp);
-            console.log(response.main.temp_min);
-            console.log(response.main.temp_max);
+            $("#description").text(response.weather[0].description)
 
 
-            //Logs UNIX timestamp
-            console.log(response.dt);
+            //logs humidity
+            $("#humidity").text(response.main.humidity)
 
 
-            //converts UNIX timestamp to Date and Time
-            
-
-
-
-
+            //logs temperature
+            $("#temperature").text(response.main.temp + " °F");
 
             //Weather Icons
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-            $('#weather-icon').attr('src', iconurl);
+            var image = $("<img>").attr("src", iconurl)
+            $('#icon').empty();
+            $('#icon').append(image);
+
+
 
 
             /*
