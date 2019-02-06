@@ -11,7 +11,6 @@ $(document).ready(function () {
     var langCode;
     var langName;
     var translateText;
-    var currentRate;
 
     var phrases = [
         "Where can I find an ATM?",
@@ -29,9 +28,6 @@ $(document).ready(function () {
     $("#search").on("click", function () {
 
         event.preventDefault();
-
-        // Empty Result DOM
-        $("#result").empty();
 
         var fahrenheit = "&units=imperial";
 
@@ -98,11 +94,8 @@ $(document).ready(function () {
                         // Empties old calculation
                         $("#currency").empty();
 
-                        // Stores new rate in global variable for rate calculation
-                        currentRate = response.rates[i];
-
-                        // Creates element to hold rate info
-                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
+                        // Stores new rate
+                        var $currentRate = $("<p>").text(response.rates[i] + " " + currencyName);
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
@@ -133,35 +126,6 @@ $(document).ready(function () {
                 getTranslation(i, translateURL);
             }
         });
-    });
-
-    /*
-    =======================================
-    Rate Calculation | Click Handler
-    =======================================
-    */
-
-    $("#convert").on("click", function() {
-        event.preventDefault();
-
-        // Empty Result DOM
-        $("#result").empty();
-
-        // Get user input
-        var USD = $("#money").val();
-
-        // Calcualted result
-        var result = Math.round(USD * currentRate).toLocaleString();
-
-        // Calculate amount in local currency
-        var $amountToBring = $("<p>").text(result + " " + currencyName);
-
-        // Print to DOM
-        $("#result").append($amountToBring);
-
-        // Clear user input
-        $("#money").val("");
-
     });
 
     /*
