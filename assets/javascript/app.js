@@ -11,7 +11,6 @@ $(document).ready(function () {
     var langCode;
     var langName;
     var translateText;
-    var currentRate;
 
     var phrases = [
         "Where can I find an ATM?",
@@ -29,9 +28,6 @@ $(document).ready(function () {
     $("#search").on("click", function () {
 
         event.preventDefault();
-
-        // Empty Result DOM
-        $("#result").empty();
 
         var fahrenheit = "&units=imperial";
 
@@ -98,11 +94,8 @@ $(document).ready(function () {
                         // Empties old calculation
                         $("#currency").empty();
 
-                        // Stores new rate in global variable for rate calculation
-                        currentRate = response.rates[i];
-
-                        // Creates element to hold rate info
-                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
+                        // Stores new rate
+                        var $currentRate = $("<p>").text(response.rates[i] + " " + currencyName);
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
