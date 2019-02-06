@@ -33,7 +33,12 @@
       </div>
     </div>
 
-
+    <!-- Location Row -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <h3 id="location"></h3>
+      </div>
+    </div>
 
 
 
@@ -41,21 +46,23 @@
     <div class="row">
       <!-- Content Left -->
       <!-- Currency -->
-      <div class="col s5">CURRENCY
+      <div class="col s5">CURRENCY (Current rate to $1 USD)
         <div class="card medium z-depth-4 test1 notransparency">
           <p class="white-text">
-            Current rate (to $1 USD):
             <span class="white-text" id="currency">
             </span>
           </p>
+          <div class="form-group">
+            <input type="text" class="form-control z-depth-4 notransparency" id="money" placeholder="How much $ do you want to bring?">
+          </div>
+          <button type="submit" class="btn" id="convert">Submit</button>
         </div>
       </div>
 
       <!-- Phrases -->
-      <div class="col s5">PHRASES
+      <div class="col s5">HELPFUL PHRASES:
         <div class="card medium z-depth-4 test2 notransparency">
           <p class="white-text">
-            Helpful phrases:
             <span class="white-text" id="phrases">
             </span>
           </p>
