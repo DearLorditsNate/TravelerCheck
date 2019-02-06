@@ -1,8 +1,8 @@
 body {
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/bgM.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 140%;
 }
 
 .transparency {

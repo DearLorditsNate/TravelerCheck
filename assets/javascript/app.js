@@ -45,6 +45,8 @@ $(document).ready(function () {
             // Gets country code
             var countryCode = response.sys.country;
 
+            console.log(response);
+
             //Logs Weather
 
             $("#description").text(response.weather[0].description)
