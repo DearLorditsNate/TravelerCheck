@@ -30,6 +30,9 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+        // Empty Result DOM
+        $("#result").empty();
+
         var fahrenheit = "&units=imperial";
 
         var city = $("#city").val();
@@ -96,7 +99,10 @@ $(document).ready(function () {
                         $("#currency").empty();
 
                         // Stores new rate
-                        var $currentRate = $("<p>").text(response.rates[i] + " " + currencyName);
+                        currentRate = response.rates[i];
+
+                        // Creates element
+                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
