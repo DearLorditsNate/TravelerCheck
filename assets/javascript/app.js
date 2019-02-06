@@ -154,7 +154,7 @@ $(document).ready(function () {
         var result = Math.round(USD * currentRate).toLocaleString();
 
         // Calculate amount in local currency
-        var $amountToBring = $("<p>").text(result + " " + currencyName);
+        var $amountToBring = $("<p>").text(result + " " + currencyName).addClass("white-text");
 
         // Print to DOM
         $("#result").append($amountToBring);
