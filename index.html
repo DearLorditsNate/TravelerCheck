@@ -7,9 +7,9 @@
   <title>Traveler Check | Main Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Materialize CSS-->
+  <!-- Materialize CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<!-- Css -->
+  <!-- Css -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
 </head>
@@ -17,8 +17,8 @@
 
 
 <body>
-<!-- Start container -->
-  <div class="container">
+  <!-- Start container -->
+  <div class="container transparency">
 
     <!-- Header Row -->
     <div class="row header-row">
@@ -26,7 +26,7 @@
         <!-- Serch Bar -->
         <form class="center-align">
           <div class="form-group">
-            <input type="text" class="form-control z-depth-4" id="city" placeholder="Where are you going?">
+            <input type="text" class="form-control z-depth-4 notransparency" id="city" placeholder="Where are you going?">
           </div>
           <button type="submit" class="btn" id="search">Submit</button>
         </form>
@@ -38,11 +38,11 @@
 
 
     <!-- Content Row -->
-    <div class="row white">
+    <div class="row">
       <!-- Content Left -->
       <!-- Currency -->
-      <div class="col s5">Currency
-        <div class="card medium teal z-depth-4">
+      <div class="col s5">CURRENCY
+        <div class="card medium z-depth-4 test1 notransparency">
           <p class="white-text">
             Current rate (to $1 USD):
             <span class="white-text" id="currency">
@@ -52,8 +52,8 @@
       </div>
 
       <!-- Phrases -->
-      <div class="col s5">Phrases
-        <div class="card medium z-depth-4 test">
+      <div class="col s5">PHRASES
+        <div class="card medium z-depth-4 test2 notransparency">
           <p class="white-text">
             Helpful phrases:
             <span class="white-text" id="phrases">
@@ -61,14 +61,30 @@
           </p>
         </div>
       </div>
+
       <!-- Content Right -->
-      <div class="col s2">Weather
-        <div class="card medium teal z-depth-4">
-          <p class="white-text">
+      <div class="col s2">Weather and Time
+        <div class="card medium z-depth-4 test3 notransparency">
+          <p class="white-text wx">
             Local weather:
-            <span class="white-text">
+            <span class="white-text" id="weather">
             </span>
-          </p>
+            <p class="white-text">
+              Description:
+              <span class="white-text" id="description">
+              </span>
+              <p class="white-text">
+                Temperature:
+                <span class="white-text" id="temperature">
+                </span>
+                <div id="icon">
+
+                </div>
+                <p class="white-text">
+                  Humidity:
+                  <span class="white-text" id="humidity">
+                  </span>
+                </p>
         </div>
       </div>
     </div>
@@ -82,19 +98,19 @@
 
 
 
+  <!-- Moment JS  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone.min.js">   </script> -->
 
 
-<!-- Jquery -->
+  <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-    </script>
+    crossorigin="anonymous"></script>
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<!-- Currency Codes -->
+  <!-- Currency Codes -->
   <script src="assets/javascript/currency_codes.js"></script>
 
-<!-- Javascript -->
+  <!-- Javascript -->
   <script src="assets/javascript/app.js"></script>
 
 </body>
