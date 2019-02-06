@@ -10,7 +10,14 @@ $(document).ready(function () {
     var currencyName;
     var langCode;
     var langName;
+    var translateText;
 
+    var phrases = [
+        "Where can I find an ATM?",
+        "Can you tell me where the bank is?",
+        "How much does a taxi cost?",
+        "Do you accept credit cards?"
+    ];
 
     /*
     =======================================
@@ -92,6 +99,50 @@ $(document).ready(function () {
                     }
                 }
             });
+
+            /*
+            =======================================
+            Translation API Call
+            =======================================
+            */
+            var translateKey = "trnsl.1.1.20190201T052022Z.ae090add23877f52.1b85d9520f4a032cb3316ad3fde315f2aad06966";
+            var translateURL;
+            var $engPhrase;
+            var $translatedPhrase;
+
+            for (var i = 0; i < phrases.length; i++) {
+                translateText = phrases[i];
+                translateURL =
+                    "https://translate.yandex.net/api/v1.5/tr.json/translate?key=" +
+                    translateKey +
+                    "&text=" +
+                    translateText +
+                    "&lang=" +
+                    langCode;
+
+                $engPhrase = $("<p>").text(translateText).attr("id", i);
+                $translatedPhrase = $("<p>").attr("data-id", i);
+
+                $("#phrases").append($engPhrase).append($translatedPhrase);
+            
+
+                $.ajax({
+                    url: translateURL,
+                    method: "GET"
+                }).then(function (response) {
+                    // var $translatedPhrase = $("<p>").text(response.text).attr("data-id", i);
+
+                    $("#phrases").attr();
+
+                });
+
+            }
+
+
+
+
+
+
         });
     });
 
