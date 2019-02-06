@@ -18,15 +18,15 @@
 
 <body>
 <!-- Start container -->
-  <div class="container">
+  <div class="container transparency">
 
-    <!-- Header Row -->
+<!-- Header Row -->
     <div class="row header-row">
       <div class="row s12">
-        <!-- Serch Bar -->
+<!-- Serch Bar -->
         <form class="center-align">
           <div class="form-group">
-            <input type="text" class="form-control z-depth-4" id="city" placeholder="Where are you going?">
+            <input type="text" class="form-control z-depth-4 notransparency" id="city" placeholder="Where are you going?">
           </div>
           <button type="submit" class="btn" id="search">Submit</button>
         </form>
@@ -37,12 +37,12 @@
 
 
 
-    <!-- Content Row -->
-    <div class="row white">
-      <!-- Content Left -->
-      <!-- Currency -->
-      <div class="col s5">Currency
-        <div class="card medium teal z-depth-4">
+<!-- Content Row -->
+    <div class="row">
+<!-- Content Left -->
+<!-- Currency -->
+      <div class="col s5">CURRENCY
+        <div class="card medium z-depth-4 test1 notransparency">
           <p class="white-text">
             Current rate (to $1 USD):
             <span class="white-text" id="currency">
@@ -51,9 +51,9 @@
         </div>
       </div>
 
-      <!-- Phrases -->
-      <div class="col s5">Phrases
-        <div class="card medium z-depth-4 test">
+<!-- Phrases -->
+      <div class="col s5">PHRASES
+        <div class="card medium z-depth-4 test2 notransparency">
           <p class="white-text">
             Helpful phrases:
             <span class="white-text" id="phrases">
@@ -61,11 +61,11 @@
           </p>
         </div>
       </div>
-      <!-- Content Right -->
 
+      <!-- Content Right -->
       <div class="col s2">Weather and Time
-        <div class="card medium teal z-depth-4">
-          <p class="white-text">
+        <div class="card medium z-depth-4 test3 notransparency">
+          <p class="white-text wx">
             Local weather:
             <span class="white-text" id="weather">
             </span>
@@ -103,9 +103,8 @@
  
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-    </script>
-  <!-- Materialize JS -->
+    crossorigin="anonymous"></script>
+<!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <!-- Currency Codes -->
