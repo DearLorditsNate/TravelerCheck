@@ -130,6 +130,35 @@ $(document).ready(function () {
 
     /*
     =======================================
+    Rate Calculation | Click Handler
+    =======================================
+    */
+
+    $("#convert").on("click", function() {
+        event.preventDefault();
+
+        // Empty Result DOM
+        $("#result").empty();
+
+        // Get user input
+        var USD = $("#money").val();
+
+        // Calcualted result
+        var result = Math.round(USD * currentRate).toLocaleString();
+
+        // Calculate amount in local currency
+        var $amountToBring = $("<p>").text(result + " " + currencyName).addClass("white-text");
+
+        // Print to DOM
+        $("#result").append($amountToBring);
+
+        // Clear user input
+        $("#money").val("");
+
+    });
+
+    /*
+    =======================================
     Function Declarations
     =======================================
     */
