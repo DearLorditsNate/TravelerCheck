@@ -11,6 +11,7 @@ $(document).ready(function () {
     var langCode;
     var langName;
     var translateText;
+    var currentRate;
 
     var phrases = [
         "Where can I find an ATM?",
