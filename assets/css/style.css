@@ -7,15 +7,11 @@ body {
     font-family: 'Stardos Stencil', cursive;
 }
 
-
-
 #location {
     font-family: 'Stardos Stencil', cursive;
     margin-bottom: 100px;
     color: #32383E;
 }
-
-
 
 .transparency {
     background-color: white; 
@@ -23,50 +19,16 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-
-
 .notransparency {
     background-color: white;
 }
-
-
 
 form {
     margin-top: 50px;
 }
 
-<<<<<<< HEAD
-
-
-.cur {
-    font-family: 'Ubuntu', sans-serif;
-    color: #6C7782;
-    font-size: 15px;
-}
-
-
-
-.phr {
-    font-family: 'Ubuntu', sans-serif;
-    color: #6C7782;
-    font-size: 15px;
-}
-
-
-
-.wea {
-    font-family: 'Ubuntu', sans-serif;
-    color: #6C7782;
-    font-size: 15px;
-}
-
-
-
-#city {
-=======
 #city,
 #money {
->>>>>>> ce7e76a0772ff40f71d8c83864bc1ce5d8650c6d
     border-radius: 40px;
     padding: 10px;
     margin-top: 30px;
@@ -79,37 +41,17 @@ form {
     opacity: 1;
 }
 
-
-
 #money {
-    border-radius: 40px;
-    margin-top: 30px;
-    margin-bottom: 10px;
     max-width: 95%;
-    background-color: white;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
-    opacity: 1;
-    float: center;
 }
-
-
 
 #placeholder {
     color: gray;
 }
 
-<<<<<<< HEAD
-
-
 #search {
-    width: 90px;
-=======
-#search,
-#convert {
     width: 100px;
->>>>>>> ce7e76a0772ff40f71d8c83864bc1ce5d8650c6d
     height: 50px;
     font-size: 15px;
     border-radius: 40px;
@@ -117,8 +59,6 @@ form {
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
 }
-
-
 
 #convert {
     width: 72px;
@@ -130,19 +70,13 @@ form {
     font-family: 'Ubuntu', sans-serif;
     }
 
-
-
 .test1 {
     background-color: turquoise;
 }
 
-
-
 .test2 {
     background-color: cornflowerblue;
 }
-
-
 
 .test3 {
     background-color: slateblue;
