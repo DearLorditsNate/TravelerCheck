@@ -35,6 +35,7 @@ form {
     margin-top: 50px;
 }
 
+<<<<<<< HEAD
 
 
 .cur {
@@ -62,6 +63,10 @@ form {
 
 
 #city {
+=======
+#city,
+#money {
+>>>>>>> ce7e76a0772ff40f71d8c83864bc1ce5d8650c6d
     border-radius: 40px;
     padding: 10px;
     margin-top: 30px;
@@ -95,10 +100,16 @@ form {
     color: gray;
 }
 
+<<<<<<< HEAD
 
 
 #search {
     width: 90px;
+=======
+#search,
+#convert {
+    width: 100px;
+>>>>>>> ce7e76a0772ff40f71d8c83864bc1ce5d8650c6d
     height: 50px;
     font-size: 15px;
     border-radius: 40px;
