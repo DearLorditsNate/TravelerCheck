@@ -11,93 +11,95 @@
   <!-- Css -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
   <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700|Ubuntu:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700|Ubuntu:700|Poppins" rel="stylesheet">
 </head>
 
 
 
 <body>
-  <!-- Start container -->
-  <div class="container transparency">
-    <!-- Header Row -->
-    <div class="row header-row">
-      <div class="row s12">
-        <!-- Search Bar -->
-        <form class="center-align">
-          <div class="form-group">
-            <input type="text" class="form-control z-depth-3 notransparency" id="city"
-              placeholder="Where are you going?">
+  <!-- Header Row -->
+  <div class="row header-img">
+    <h1>traveler check</h1>
+    <div class="col s12 center-align">
+      <!-- Search Bar -->
+
+      <div class="row">
+        <form>
+          <div class="form-group valign-wrapper">
+            <div class="col s8">
+              <input type="text" class="form-control z-depth-3 notransparency right" id="city"
+                placeholder="Where are you going?">
+            </div>
+            <div class="col s4">
+              <button type="submit" class="btn left" id="search">Submit</button>
+            </div>
           </div>
-          <button type="submit" class="btn" id="search">Submit</button>
         </form>
       </div>
     </div>
+  </div>
 
-    <!-- Location Row -->
-    <div class="row">
-      <div class="col s12 center-align">
-        <h3 id="location"></h3>
+  <!-- Location Row -->
+  <div class="row">
+    <div class="col s12 center-align">
+      <h3 id="location"></h3>
+    </div>
+  </div>
+
+  <!-- Content Row -->
+  <div class="row white">
+    <!-- Content Left -->
+    <!-- Currency -->
+    <div class="col s4"><span class="sub-head">EXCHANGE RATE (To $1 USD)</span>
+      <div class="card medium z-depth-4 test1 notransparency center-align">
+          <span class="white-text" id="currency">
+          </span>
+ 
+        <!-- Search Bar -->
+        <div class="form-group">
+          <input type="text" class="form-control z-depth-4 notransparency" id="money"
+            placeholder="How much USD to bring?">
+        </div>
+        <button type="submit" class="btn" id="convert">Submit</button>
+        <!-- Result -->
+        <div id="result"></div>
       </div>
     </div>
 
-    <!-- Content Row -->
-    <div class="row">
-      <!-- Content Left -->
-      <!-- Currency -->
-      <div class="col s5">CURRENCY (Current rate to $1 USD)
-        <div class="card medium z-depth-4 test1 notransparency center-align">
-          <p class="white-text">
-            <span class="white-text" id="currency">
-            </span>
-          </p>
-          <!-- Search Bar -->
-          <div class="form-group">
-            <input type="text" class="form-control z-depth-4 notransparency" id="money"
-              placeholder="How much USD to bring?">
-          </div>
-          <button type="submit" class="btn" id="convert">Submit</button>
-          <!-- Result -->
-          <div id="result"></div>
-        </div>
+    <!-- Phrases -->
+    <div class="col s5"><span class="sub-head">HELPFUL PHRASES</span>
+      <div class="card medium z-depth-4 test2 notransparency">
+          <span class="white-text" id="phrases">
+          </span>
       </div>
+    </div>
 
-      <!-- Phrases -->
-      <div class="col s5">HELPFUL PHRASES
-        <div class="card medium z-depth-4 test2 notransparency">
-          <p class="white-text">
-            <span class="white-text" id="phrases">
-            </span>
-          </p>
+
+
+    <!-- Content Right -->
+    <!-- WEATHER -->
+    <div class="col s3"><span class="sub-head">LOCAL WEATHER</span>
+      <div class="card card-panel medium z-depth-3 test3 notransparency">
+        <!-- Weather Icon -->
+        <div id="icon">
         </div>
-      </div>
+        <!-- Description -->
+        <p class="white-text">
+          Description:
+          <span class="white-text" id="description">
+          </span>
+        <!-- Temperature -->
+        <p class="white-text">
+          Temperature:
+          <span class="white-text" id="temperature">
+          </span>
 
-
-
-      <!-- Content Right -->
-      <!-- WEATHER -->
-      <div class="col s2 wea">WEATHER
-        <div class="card card-panel medium z-depth-3 test3 notransparency">
-          <!-- Weather Icon -->
-          <div id="icon">
-          </div>
-          <!-- Description -->
-          <p class="white-text">
-            Description:
-            <span class="white-text" id="description">
-            </span>
-            <p class="white-text">
-              <!-- Temperature -->
-              Temperature:
-              <span class="white-text" id="temperature">
-              </span>
-
-              <p class="white-text">
-                <!-- Humidity -->
-                Humidity:
-                <span class="white-text" id="humidity">
-                </span>
-              </p>
-        </div>
+        <!-- Humidity -->
+        <p class="white-text">
+          Humidity:
+          <span class="white-text" id="humidity">
+          </span>
+        </p>
       </div>
     </div>
   </div>
