@@ -102,7 +102,7 @@ $(document).ready(function () {
                         currentRate = response.rates[i];
 
                         // Creates element
-                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
+                        var $currentRate = $("<p>").text(currentRate + " " + currencyName).addClass("rate");
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
@@ -187,10 +187,16 @@ $(document).ready(function () {
             url: translateURL,
             method: "GET"
         }).then(function (response) {
-            var $engPhrase = $("<p>").text(phrases[index]);
-            var $translatedPhrase = $("<p>").text(response.text);
+            var $div = $("<div>");
+            var $br = $("<br>");
+            var $p = $("<p>");
+            var $hr = $("<hr>");
+            var $engPhrase = $("<span>").text(phrases[index]).addClass("phrase").addClass("it");
+            var $translatedPhrase = $("<span>").text(response.text).addClass("phrase");
+
+            var $phraseGroup = ($p).append($engPhrase).append($br).append($translatedPhrase).append($hr);
             
-            $("#phrases").append($engPhrase).append($translatedPhrase);
+            $("#phrases").append($phraseGroup);
 
         });
     }
