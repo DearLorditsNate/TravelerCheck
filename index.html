@@ -27,7 +27,7 @@
         <form>
           <div class="form-group valign-wrapper">
             <div class="col s8">
-              <input type="text" class="form-control z-depth-3 notransparency right" id="city"
+              <input type="text" class="form-control z-depth-3 right" id="city"
                 placeholder="Where are you going?">
             </div>
             <div class="col s4">
@@ -51,25 +51,28 @@
     <!-- Content Left -->
     <!-- Currency -->
     <div class="col s4"><span class="sub-head">EXCHANGE RATE (To $1 USD)</span>
-      <div class="card medium z-depth-4 card-bg notransparency center-align">
+      <div class="card medium z-depth-4 card-bg center-align">
           <span class="white-text" id="currency">
+            <p class="rate">Current exchange rate.</p>
           </span>
- 
         <!-- Search Bar -->
         <div class="form-group">
-          <input type="text" class="form-control z-depth-4 notransparency" id="money"
-            placeholder="How much USD to bring?">
+          <input type="text" class="form-control z-depth-4" id="money"
+            placeholder="How much USD do you want to bring?">
         </div>
         <button type="submit" class="btn" id="convert">Submit</button>
         <!-- Result -->
-        <div id="result"></div>
+        <span class="white-text" id="result">
+          <p class="rate">How much to bring.</p>
+        </span>
       </div>
     </div>
 
     <!-- Phrases -->
     <div class="col s5"><span class="sub-head">HELPFUL PHRASES</span>
-      <div class="card medium z-depth-4 card-bg notransparency valign-wrapper">
+      <div class="card medium z-depth-4 card-bg valign-wrapper">
           <span class="white-text" id="phrases">
+            <p class="white-text rate">Learn some helpful pharases for when you arrive!</p>
           </span>
       </div>
     </div>
@@ -79,7 +82,7 @@
     <!-- Content Right -->
     <!-- WEATHER -->
     <div class="col s3"><span class="sub-head">LOCAL WEATHER</span>
-      <div class="card card-panel medium z-depth-3 card-bg notransparency">
+      <div class="card card-panel medium z-depth-3 card-bg">
         <!-- Weather Icon -->
         <div id="icon">
         </div>

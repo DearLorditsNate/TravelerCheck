@@ -30,8 +30,10 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        // Empty Result DOM
+        // Reset Result DOM
+        var $p = $("<p>").text("How much to bring.").addClass("white-text").addClass("rate");
         $("#result").empty();
+        $("#result").append($p);
 
         var fahrenheit = "&units=imperial";
 
@@ -99,10 +101,10 @@ $(document).ready(function () {
                         $("#currency").empty();
 
                         // Stores new rate
-                        currentRate = response.rates[i];
+                        currentRate = (Math.round(response.rates[i] * 100) / 100).toLocaleString();
 
                         // Creates element
-                        var $currentRate = $("<p>").text(currentRate + " " + currencyName).addClass("rate");
+                        var $currentRate = $("<p>").text("Rate: " + currentRate + " " + currencyName).addClass("rate");
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
@@ -151,13 +153,13 @@ $(document).ready(function () {
         var USD = $("#money").val();
 
         // Calcualted result
-        var result = Math.round(USD * currentRate).toLocaleString();
+        var result = Math.round(USD * currentRate.replace(",", "")).toLocaleString();
 
         // Calculate amount in local currency
-        var $amountToBring = $("<p>").text(result + " " + currencyName).addClass("white-text");
+        var $amountToBring = $("<p>").text("Bring: " + result + " " + currencyName).addClass("white-text");
 
         // Print to DOM
-        $("#result").append($amountToBring);
+        $("#result").append($amountToBring).addClass("rate");
 
         // Clear user input
         $("#money").val("");
