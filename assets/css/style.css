@@ -27,6 +27,31 @@ h1 {
     font-style: italic;
 }
 
+
+/* WEATHER SECTION */
+.iconCSS {
+    height:200px;
+    width: 200px;
+}
+
+.descriptionCSS {
+    font-size: 30px;
+    text-transform: capitalize;
+
+}
+
+.temperatureCSS {
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+
+.infoCSS {
+    margin-top: -20px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
 .rate {
     font-size: 30px;
 }
