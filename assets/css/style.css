@@ -31,6 +31,14 @@ h1 {
     font-size: 30px;
 }
 
+.lower-case {
+    text-transform: lowercase;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}
+
 .phrase {
     font-size: 20px;
 }
