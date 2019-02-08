@@ -27,8 +27,7 @@
         <form>
           <div class="form-group valign-wrapper">
             <div class="col s8">
-              <input type="text" class="form-control z-depth-3 right" id="city"
-                placeholder="Where are you going?">
+              <input type="text" class="form-control z-depth-3 right" id="city" placeholder="Where are you going?">
             </div>
             <div class="col s4">
               <button type="submit" class="btn left" id="search">Submit</button>
@@ -52,13 +51,12 @@
     <!-- Currency -->
     <div class="col s4"><span class="sub-head">EXCHANGE RATE (To $1 USD)</span>
       <div class="card medium z-depth-4 card-bg center-align">
-          <span class="white-text" id="currency">
-            <p class="rate">Current exchange rate.</p>
-          </span>
+        <span class="white-text" id="currency">
+          <p class="rate">Current exchange rate.</p>
+        </span>
         <!-- Search Bar -->
         <div class="form-group">
-          <input type="text" class="form-control z-depth-4" id="money"
-            placeholder="How much USD do you want to bring?">
+          <input type="text" class="form-control z-depth-4" id="money" placeholder="How much USD do you want to bring?">
         </div>
         <button type="submit" class="btn" id="convert">Submit</button>
         <!-- Result -->
@@ -71,9 +69,9 @@
     <!-- Phrases -->
     <div class="col s5"><span class="sub-head">HELPFUL PHRASES</span>
       <div class="card medium z-depth-4 card-bg valign-wrapper">
-          <span class="white-text" id="phrases">
-            <p class="white-text rate">Learn some helpful pharases for when you arrive!</p>
-          </span>
+        <span class="white-text" id="phrases">
+          <p class="white-text rate">Learn some helpful pharases for when you arrive!</p>
+        </span>
       </div>
     </div>
 
@@ -81,29 +79,95 @@
 
     <!-- Content Right -->
     <!-- WEATHER -->
-    <div class="col s3"><span class="sub-head">LOCAL WEATHER</span>
-      <div class="card card-panel medium z-depth-3 card-bg">
+    <!-- <div class="col s3"><span class="sub-head">LOCAL WEATHER</span> -->
+      <!-- <div class="card card-panel medium z-depth-3 card-bg"> -->
         <!-- Weather Icon -->
-        <div id="icon">
-        </div>
+        <!-- <div id="icon"> -->
+        <!-- </div> -->
         <!-- Description -->
-        <p class="white-text">
-          Description:
-          <span class="white-text" id="description">
-          </span>
-        <!-- Temperature -->
-        <p class="white-text">
-          Temperature:
-          <span class="white-text" id="temperature">
-          </span>
+        <!-- <p class="white-text"> -->
+          <!-- Description: -->
+          <!-- <span class="white-text" id="description"> -->
+          <!-- </span> -->
+          <!-- Temperature -->
+          <!-- <p class="white-text"> -->
+            <!-- Temperature: -->
+            <!-- <span class="white-text" id="temperature"> -->
+            <!-- </span> -->
 
-        <!-- Humidity -->
-        <p class="white-text">
-          Humidity:
-          <span class="white-text" id="humidity">
-          </span>
-        </p>
+            <!-- Humidity -->
+            <!-- <p class="white-text"> -->
+              <!-- Humidity: -->
+              <!-- <span class="white-text" id="humidity"> -->
+              <!-- </span> -->
+            <!-- </p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+<!-- Content Right -->
+<!-- WEATHER -->
+<div class="col s3"><span class="sub-head">LOCAL WEATHER</span>
+  <div class="card card-panel medium z-depth-4 card-bg">
+
+    <!-- Description -->
+    <div class="row">
+      <div class="col s12">
+        <span>
+          <h6 class="white-text center-align" id="description"></h6>
+        </span>
       </div>
+    </div>
+    <!-- Weather Icon -->
+    <div class="row">
+      <div class="col s6">
+        <div class="left-align" id="icon">
+        </div>
+      </div>
+      <!-- Temperature -->
+      <div class="col s6">
+        <span>
+          <h5 class="white-text right-align" id="temperature"></h5>
+        </span>
+      </div>
+    </div>
+    <!-- Temperature Maximum-->
+    <div class="row">
+      <span class="white-text left-align" id="temperature-max">
+      </span>
+    </div>
+    <!-- Temperature Minumum-->
+    <div class="row">
+      <span class="white-text left-align" id="temperature-min">
+      </span>
+    </div>
+    <!-- Humidity -->
+    <div class="row">
+      <span class="white-text left-align" id="humidity">
+      </span>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  </div>
+
+
+  <!-- Modal -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>You didn't enter a valid location!</h4>
+      <p>Try just entering the name of the city you want to visit.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
     </div>
   </div>
 

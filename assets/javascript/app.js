@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('.modal').modal();
+
     /*
     =======================================
     Global Variables
@@ -62,6 +64,8 @@ $(document).ready(function () {
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
+            $("#temperature-max").text("Hi: " + response.main.temp_max + " °F");
+            $("#temperature-min").text("Lo: " + response.main.temp_min + " °F");
 
             //Weather Icons
             var iconcode = response.weather[0].icon;
