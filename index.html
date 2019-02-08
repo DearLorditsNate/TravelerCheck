@@ -4,30 +4,33 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Traveler Check | Main Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Materialize CSS-->
+
+  <title>Traveler Check</title>
+
+  <!-- Materialize-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Css -->
+
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-  <!-- google fonts -->
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700|Ubuntu:700|Poppins" rel="stylesheet">
 </head>
-
-
 
 <body>
   <!-- Header Row -->
   <div class="row header-img">
+    <!-- Title -->
     <h1 class="lower-case">Traveler Check</h1>
     <div class="col s12 center-align">
       <!-- Search Bar -->
-
       <div class="row">
         <form>
           <div class="form-group valign-wrapper">
             <div class="col s8">
-              <input type="text" class="form-control z-depth-3 right" id="city" placeholder="Where are you going?">
+              <input type="text" class="form-control z-depth-3 right" id="city"
+                placeholder="What city are you going to?">
             </div>
             <div class="col s4">
               <button type="submit" class="btn left" id="search">Submit</button>
@@ -37,6 +40,7 @@
       </div>
     </div>
   </div>
+  <!-- End Header Row -->
 
   <!-- Location Row -->
   <div class="row">
@@ -44,11 +48,11 @@
       <h3 id="location"></h3>
     </div>
   </div>
+  <!-- End Location Row -->
 
   <!-- Content Row -->
   <div class="row white">
-    <!-- Content Left -->
-    <!-- Currency -->
+    <!-- Currency Card -->
     <div class="col s4"><span class="sub-head upper-case">Exchange Rate (To $1 USD)</span>
       <div class="card medium z-depth-4 card-bg center-align">
         <span class="white-text" id="currency">
@@ -65,8 +69,9 @@
         </span>
       </div>
     </div>
+    <!-- End Currency Card -->
 
-    <!-- Phrases -->
+    <!-- Phrases Card -->
     <div class="col s5"><span class="sub-head upper-case">Helpful Phrases</span>
       <div class="card medium z-depth-4 card-bg valign-wrapper">
         <span class="white-text" id="phrases">
@@ -74,57 +79,57 @@
         </span>
       </div>
     </div>
+    <!-- End Phrases Card -->
 
-<!-- Content Right -->
-<!-- WEATHER -->
-<div class="col s3"><span class="sub-head upper-case">Local Weather</span>
-  <div class="card card-panel medium z-depth-4 card-bg">
-
-    <!-- Description -->
-    <div class="row">
-      <div class="col s12">
-        <span>
-          <h6 class="white-text center-align descriptionCSS" id="description"></h6>
-        </span>
-      </div>
-    </div>
-    <!-- Weather Icon -->
-    <div class="row valign-wrapper">
-      <div class="col s6">
-        <div class="left-align" id="icon">
+    <!-- Weather Card -->
+    <div class="col s3"><span class="sub-head upper-case">Local Weather</span>
+      <div class="card card-panel medium z-depth-4 card-bg">
+        <!-- Description -->
+        <div class="row">
+          <div class="col s12">
+            <span>
+              <h6 class="white-text center-align descriptionCSS" id="description"></h6>
+            </span>
+          </div>
+        </div>
+        <!-- Weather Icon -->
+        <div class="row valign-wrapper">
+          <div class="col s6">
+            <div class="left-align" id="icon">
+            </div>
+          </div>
+          <!-- Temperature -->
+          <div class="col s6">
+            <span>
+              <h4 class="white-text right-align temperatureCSS" id="temperature"></h4>
+            </span>
+          </div>
+        </div>
+        <!-- Temperature Maximum-->
+        <div class="row">
+          <span class="white-text right infoCSS" id="temperature-max">
+          </span>
+        </div>
+        <!-- Temperature Minumum-->
+        <div class="row">
+          <span class="white-text right infoCSS" id="temperature-min">
+          </span>
+        </div>
+        <!-- Humidity -->
+        <div class="row">
+          <span class="white-text right infoCSS" id="humidity">
+          </span>
         </div>
       </div>
-      <!-- Temperature -->
-      <div class="col s6">
-        <span>
-          <h4 class="white-text right-align temperatureCSS" id="temperature"></h4>
-        </span>
-      </div>
     </div>
-    <!-- Temperature Maximum-->
-    <div class="row">
-      <span class="white-text right infoCSS" id="temperature-max">
-      </span>
-    </div>
-    <!-- Temperature Minumum-->
-    <div class="row">
-      <span class="white-text right infoCSS" id="temperature-min">
-      </span>
-    </div>
-    <!-- Humidity -->
-    <div class="row">
-      <span class="white-text right infoCSS" id="humidity">
-      </span>
-
-    </div>
+    <!-- End Weather Card -->
   </div>
-</div>
-  </div>
+  <!-- End Content Row -->
 
   <!-- 404 Error Modal -->
   <div id="modal1" class="modal center-align">
     <div class="modal-content">
-      <h4>We couldn't find the place you were looking for!</h4>
+      <h4>We can't find the place you're looking for!</h4>
       <p>Try entering just the name of the city you want to visit.</p>
     </div>
     <div class="modal-footer">
@@ -143,15 +148,16 @@
     </div>
   </div>
 
-
-
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <!-- Currency Codes -->
   <script src="assets/javascript/currency_codes.js"></script>
+
   <!-- Javascript -->
   <script src="assets/javascript/app.js"></script>
 

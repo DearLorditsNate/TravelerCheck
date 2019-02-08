@@ -1,16 +1,8 @@
 /* 
 ===========================
-Color Palette
+Universal Styles
 ===========================
-
-//Button Color
-#38BAA4
-
-
-
 */
-
-
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -18,8 +10,14 @@ body {
     color: #114B5F;
 }
 
+/* 
+===========================
+Header Row Styles
+===========================
+*/
+
 .header-img {
- background-image: url("../images/AdobeStock_14921374.jpeg");
+    background-image: url("../images/AdobeStock_14921374.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
@@ -33,59 +31,20 @@ h1 {
     text-shadow: 1px 1px 2px #38BAA4;
 }
 
-.sub-head {
-    font-size: 20px;
-}
-
-.it {
-    font-style: italic;
-}
-
-
-/* WEATHER SECTION */
-.iconCSS {
-    height:200px;
-    width: 200px;
-}
-
-.descriptionCSS {
-    font-size: 30px;
-    text-transform: capitalize;
-
-}
-
-.temperatureCSS {
-    font-size: 45px;
-    padding-bottom: 30px;
-}
-
-.infoCSS {
-    margin-top: -20px;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-
-.rate {
-    font-size: 30px;
-}
-
 .lower-case {
     text-transform: lowercase;
-}
-
-.upper-case {
-    text-transform: uppercase;
-}
-
-.phrase {
-    font-size: 20px;
 }
 
 #location {
     font-family: 'Poppins', sans-serif;
     color: #38BAA4;
 }
+
+/* 
+===========================
+Form Styles
+===========================
+*/
 
 form {
     margin-top: 50px;
@@ -126,9 +85,75 @@ form {
     background-color: #38BAA4;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    }
+}
+
+/* 
+===========================
+Content Row Styles
+===========================
+*/
+
+.sub-head {
+    font-size: 20px;
+}
+
+.it {
+    font-style: italic;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}
 
 .card-bg {
     background-color: #FF8966;
     padding: 15px;
+}
+
+/* 
+===========================
+Exchange Rate Card Styles
+===========================
+*/
+
+.rate {
+    font-size: 30px;
+}
+
+/* 
+===========================
+Translation Card Styles
+===========================
+*/
+
+.phrase {
+    font-size: 20px;
+}
+
+/* 
+===========================
+Weather Card Styles
+===========================
+*/
+
+.iconCSS {
+    height:200px;
+    width: 200px;
+}
+
+.descriptionCSS {
+    font-size: 30px;
+    text-transform: capitalize;
+
+}
+
+.temperatureCSS {
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+
+.infoCSS {
+    margin-top: -20px;
+    font-size: 20px;
+    margin-right: 20px;
 }
