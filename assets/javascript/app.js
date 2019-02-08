@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    $('.modal').modal();
-
     /*
     =======================================
     Global Variables
@@ -50,6 +48,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+            console.log(response);
             // Gets country code
             var countryCode = response.sys.country;
 
@@ -57,10 +56,10 @@ $(document).ready(function () {
             var cityName = response.name;
 
             //Logs Weather
-            $("#description").text(response.weather[0].description)
+            $("#description").text(response.weather[0].description);
 
             //logs humidity
-            $("#humidity").text(response.main.humidity)
+            $("#humidity").text("Humidity:  " + response.main.humidity + '%');
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
@@ -70,7 +69,7 @@ $(document).ready(function () {
             //Weather Icons
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-            var image = $("<img>").attr("src", iconurl)
+            var image = $("<img>").attr("src", iconurl).addClass('iconCSS');
             $('#icon').empty();
             $('#icon').append(image);
 
@@ -138,6 +137,9 @@ $(document).ready(function () {
             
                 getTranslation(i, translateURL);
             }
+        }).fail(function () {
+            $("#modal1").modal();
+            $("#modal1").modal('open');
         });
     });
 
@@ -154,19 +156,33 @@ $(document).ready(function () {
         $("#result").empty();
 
         // Get user input
-        var USD = $("#money").val();
+        var USD = parseInt($("#money").val());
 
-        // Calcualted result
-        var result = Math.round(USD * currentRate.replace(",", "")).toLocaleString();
+        console.log("typeof: " + typeof USD);
+        console.log("USD variable: " + USD);
 
-        // Calculate amount in local currency
-        var $amountToBring = $("<p>").text("Bring: " + result + " " + currencyName).addClass("white-text");
+        if (isNaN(USD)) {
+            $("#modal2").modal();
+            $("#modal2").modal('open');
+            $("#money").val("");
 
-        // Print to DOM
-        $("#result").append($amountToBring).addClass("rate");
+            // Reset Result DOM
+            var $p = $("<p>").text("How much to bring.").addClass("white-text").addClass("rate");
+            $("#result").empty();
+            $("#result").append($p);
+        } else {
+            // Calcualted result
+            var result = Math.round(USD * currentRate.replace(",", "")).toLocaleString();
 
-        // Clear user input
-        $("#money").val("");
+            // Calculate amount in local currency
+            var $amountToBring = $("<p>").text("Bring: " + result + " " + currencyName).addClass("white-text");
+
+            // Print to DOM
+            $("#result").append($amountToBring).addClass("rate");
+
+            // Clear user input
+            $("#money").val("");
+        }
 
     });
 
