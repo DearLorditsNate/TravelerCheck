@@ -7,7 +7,7 @@ A currency conversion check for your travels.
 ## Technologies Used
 * [Materialize](https://materializecss.com/)
 * [OpenWeatherMap API](https://openweathermap.org/api)
-* [open exchange rates API](https://openexchangerates.org/)
+* [Open Exchange Rates API](https://openexchangerates.org/)
 * [Yandex Translate API](https://tech.yandex.com/translate/)
 
 **Features include:**
