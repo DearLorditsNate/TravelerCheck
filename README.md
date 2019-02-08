@@ -5,10 +5,10 @@ A currency conversion check for your travels.
  An application that lets users search for their travel destination to see the current exchange rate, input an amount of money to be converted, learn local phrases to access financial services when they arrive, and displays local weather in destination.
 
 ## Technologies Used
-* [Materialize] (https://materializecss.com/)
-* [OpenWeatherMap API] (https://openweathermap.org/api)
-* [open exchange rates API] (https://openexchangerates.org/)
-* [Yandex Translate API] (https://tech.yandex.com/translate/)
+* [Materialize](https://materializecss.com/)
+* [OpenWeatherMap API](https://openweathermap.org/api)
+* [open exchange rates API](https://openexchangerates.org/)
+* [Yandex Translate API](https://tech.yandex.com/translate/)
 
 **Features include:**
 * Search anywhere in the world by city or city and country
