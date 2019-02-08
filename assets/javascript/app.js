@@ -59,7 +59,7 @@ $(document).ready(function () {
             $("#description").text(response.weather[0].description);
 
             //logs humidity
-            $("#humidity").text("Humidity:  " + response.main.humidity);
+            $("#humidity").text("Humidity:  " + response.main.humidity + '%');
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
@@ -69,7 +69,7 @@ $(document).ready(function () {
             //Weather Icons
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-            var image = $("<img height='120%' width='120%' >").attr("src", iconurl)
+            var image = $("<img>").attr("src", iconurl).addClass('iconCSS');
             $('#icon').empty();
             $('#icon').append(image);
 
