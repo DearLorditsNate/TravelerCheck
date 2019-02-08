@@ -1410,7 +1410,7 @@ var countryToCode = {
         "LangName": "English"
     },
     "BA": {
-        "CurrencyName": "Bosnia and Herzegovina convertible mark",
+        "CurrencyName": "Bosnian convertible mark",
         "CurrencyCode": "BAM",
         "LangCode": "bs",
         "LangName": "Bosnian"
