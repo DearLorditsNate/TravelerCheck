@@ -38,8 +38,9 @@ $(document).ready(function () {
         var fahrenheit = "&units=imperial";
 
         var city = $("#city").val();
+        var corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
         var apiKey = "c7ff544129cc1648ae3d73196115dbe7";
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + fahrenheit + "&APPID=" + apiKey;
+        var queryURL = corsAnywhereUrl + "http://api.openweathermap.org/data/2.5/weather?q=" + city + fahrenheit + "&APPID=" + apiKey;
 
         // Clear input field
         $("#city").val("");
