@@ -2,8 +2,20 @@ body {
     background-image: url("../images/bgM.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 140%;
+    background-size: 120%;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Stardos Stencil', cursive;
 }
+
+
+
+#location {
+    font-family: 'Stardos Stencil', cursive;
+    margin-bottom: 100px;
+    color: #32383E;
+}
+
+
 
 .transparency {
     background-color: white; 
@@ -12,9 +24,11 @@ body {
 }
 
 
+
 .notransparency {
     background-color: white;
 }
+
 
 
 form {
@@ -24,14 +38,30 @@ form {
 #city,
 #money {
     border-radius: 40px;
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    max-width: 80%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-width: 60%;
     background-color: white;
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     opacity: 1;
+}
+
+
+
+#money {
+    border-radius: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-width: 95%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    opacity: 1;
+    float: center;
 }
 
 #placeholder {
@@ -45,7 +75,21 @@ form {
     font-size: 15px;
     border-radius: 40px;
     background-color: rgb(4, 174, 253);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
 }
+
+
+
+#convert {
+    width: 72px;
+    height: 40px;
+    font-size: 10px;
+    border-radius: 40px;
+    background-color: rgb(4, 174, 253);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    }
 
 
 
@@ -54,9 +98,12 @@ form {
 }
 
 
+
 .test2 {
     background-color: cornflowerblue;
 }
+
+
 
 .test3 {
     background-color: slateblue;

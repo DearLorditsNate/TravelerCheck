@@ -11,6 +11,7 @@ $(document).ready(function () {
     var langCode;
     var langName;
     var translateText;
+    var currentRate;
 
     var phrases = [
         "Where can I find an ATM?",
@@ -29,6 +30,9 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+        // Empty Result DOM
+        $("#result").empty();
+
         var fahrenheit = "&units=imperial";
 
         var city = $("#city").val();
@@ -42,6 +46,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+            console.log(response);
             // Gets country code
             var countryCode = response.sys.country;
 
@@ -49,18 +54,20 @@ $(document).ready(function () {
             var cityName = response.name;
 
             //Logs Weather
-            $("#description").text(response.weather[0].description)
+            $("#description").text(response.weather[0].description);
 
             //logs humidity
-            $("#humidity").text(response.main.humidity)
+            $("#humidity").text("Humidity:  " + response.main.humidity);
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
+            $("#temperature-min").text('Minimum ' + response.main.temp_min + " °F");
+            $("#temperature-max").text('Maximum ' + response.main.temp_max + " °F");
 
             //Weather Icons
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-            var image = $("<img>").attr("src", iconurl)
+            var image = $("<img height='120%' width='120%' >").attr("src", iconurl)
             $('#icon').empty();
             $('#icon').append(image);
 
@@ -95,7 +102,10 @@ $(document).ready(function () {
                         $("#currency").empty();
 
                         // Stores new rate
-                        var $currentRate = $("<p>").text(response.rates[i] + " " + currencyName);
+                        currentRate = response.rates[i];
+
+                        // Creates element
+                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
@@ -126,6 +136,35 @@ $(document).ready(function () {
                 getTranslation(i, translateURL);
             }
         });
+    });
+
+    /*
+    =======================================
+    Rate Calculation | Click Handler
+    =======================================
+    */
+
+    $("#convert").on("click", function() {
+        event.preventDefault();
+
+        // Empty Result DOM
+        $("#result").empty();
+
+        // Get user input
+        var USD = $("#money").val();
+
+        // Calcualted result
+        var result = Math.round(USD * currentRate).toLocaleString();
+
+        // Calculate amount in local currency
+        var $amountToBring = $("<p>").text(result + " " + currencyName).addClass("white-text");
+
+        // Print to DOM
+        $("#result").append($amountToBring);
+
+        // Clear user input
+        $("#money").val("");
+
     });
 
     /*
