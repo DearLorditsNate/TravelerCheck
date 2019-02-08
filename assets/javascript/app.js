@@ -35,9 +35,9 @@ $(document).ready(function () {
         $("#result").empty();
         $("#result").append($p);
 
-        var fahrenheit = "&units=imperial";
-
+        // Create API Query String
         var city = $("#city").val();
+        var fahrenheit = "&units=imperial";
         var corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
         var apiKey = "c7ff544129cc1648ae3d73196115dbe7";
         var queryURL = corsAnywhereUrl + "http://api.openweathermap.org/data/2.5/weather?q=" + city + fahrenheit + "&APPID=" + apiKey;
@@ -49,7 +49,6 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
             // Gets country code
             var countryCode = response.sys.country;
 
@@ -90,15 +89,11 @@ $(document).ready(function () {
             // Get currency code and name
             getCodes(countryCode, countryToCode);
 
-            console.log("Lang code: " + langCode);
-            console.log("Lang name: " + langName);
-            console.log("Currency code: " + currencyCode);
-            console.log("Currency name: " + currencyName);
-
             $.ajax({
                 url: exchangeURL,
                 method: "GET"
             }).then(function (response) {
+                // Matches user search to object in currency_codes.js
                 for (i in response.rates) {
                     if (i === currencyCode) {
                         // Empties old calculation
@@ -124,8 +119,10 @@ $(document).ready(function () {
             var translateKey = "trnsl.1.1.20190201T052022Z.ae090add23877f52.1b85d9520f4a032cb3316ad3fde315f2aad06966";
             var translateURL;
 
+            // Empties old phrases
             $("#phrases").empty();
 
+            // Loops through phrases array and calls API for each
             for (var i = 0; i < phrases.length; i++) {
                 translateText = phrases[i];
                 translateURL =
@@ -138,6 +135,7 @@ $(document).ready(function () {
             
                 getTranslation(i, translateURL);
             }
+        // Error modal if location can't be found or API throws a 404
         }).fail(function () {
             $("#modal1").modal();
             $("#modal1").modal('open');
@@ -159,9 +157,7 @@ $(document).ready(function () {
         // Get user input
         var USD = parseInt($("#money").val());
 
-        console.log("typeof: " + typeof USD);
-        console.log("USD variable: " + USD);
-
+        // Error Modal if entry is blank or NaN
         if (isNaN(USD)) {
             $("#modal2").modal();
             $("#modal2").modal('open');
@@ -184,7 +180,6 @@ $(document).ready(function () {
             // Clear user input
             $("#money").val("");
         }
-
     });
 
     /*
@@ -205,12 +200,13 @@ $(document).ready(function () {
         }
     }
 
+    // Makes translation API call and prints to DOM
     function getTranslation(index, translateURL) {
         $.ajax({
             url: translateURL,
             method: "GET"
         }).then(function (response) {
-            var $div = $("<div>");
+            // Creates elements for DOM
             var $br = $("<br>");
             var $p = $("<p>");
             var $hr = $("<hr>");
