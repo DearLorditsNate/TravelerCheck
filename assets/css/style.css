@@ -1,3 +1,17 @@
+/* 
+===========================
+Color Palette
+===========================
+
+//Button Color
+#38BAA4
+
+
+
+*/
+
+
+
 body {
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Poppins', sans-serif;
@@ -16,7 +30,7 @@ h1 {
     font-size: 60px;
     margin-bottom: -10px;
     color: white;
-    text-shadow: 1px 1px 2px #114B5F;
+    text-shadow: 1px 1px 2px #38BAA4;
 }
 
 .sub-head {
@@ -70,7 +84,7 @@ h1 {
 
 #location {
     font-family: 'Poppins', sans-serif;
-    color: #114B5F;
+    color: #38BAA4;
 }
 
 form {
@@ -98,7 +112,7 @@ form {
     height: 65px;
     font-size: 18px;
     border-radius: 40px;
-    background-color: #297373;
+    background-color: #38BAA4;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     margin-bottom: 10px;
@@ -109,7 +123,7 @@ form {
     height: 40px;
     font-size: 10px;
     border-radius: 40px;
-    background-color: #297373;
+    background-color: #38BAA4;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     }
