@@ -30,8 +30,10 @@ $(document).ready(function () {
 
         event.preventDefault();
 
-        // Empty Result DOM
+        // Reset Result DOM
+        var $p = $("<p>").text("How much to bring.").addClass("white-text").addClass("rate");
         $("#result").empty();
+        $("#result").append($p);
 
         var fahrenheit = "&units=imperial";
 
@@ -61,8 +63,8 @@ $(document).ready(function () {
 
             //logs temperature
             $("#temperature").text(response.main.temp + " °F");
-            $("#temperature-min").text('Minimum ' + response.main.temp_min + " °F");
-            $("#temperature-max").text('Maximum ' + response.main.temp_max + " °F");
+            $("#temperature-max").text("Hi: " + response.main.temp_max + " °F");
+            $("#temperature-min").text("Lo: " + response.main.temp_min + " °F");
 
             //Weather Icons
             var iconcode = response.weather[0].icon;
@@ -102,10 +104,10 @@ $(document).ready(function () {
                         $("#currency").empty();
 
                         // Stores new rate
-                        currentRate = response.rates[i];
+                        currentRate = (Math.round(response.rates[i] * 100) / 100).toLocaleString();
 
                         // Creates element
-                        var $currentRate = $("<p>").text(currentRate + " " + currencyName);
+                        var $currentRate = $("<p>").text("Rate: " + currentRate + " " + currencyName).addClass("rate");
 
                         // Appends rate to the DOM
                         $("#currency").append($currentRate);
@@ -135,6 +137,9 @@ $(document).ready(function () {
             
                 getTranslation(i, translateURL);
             }
+        }).fail(function () {
+            $("#modal1").modal();
+            $("#modal1").modal('open');
         });
     });
 
@@ -151,19 +156,33 @@ $(document).ready(function () {
         $("#result").empty();
 
         // Get user input
-        var USD = $("#money").val();
+        var USD = parseInt($("#money").val());
 
-        // Calcualted result
-        var result = Math.round(USD * currentRate).toLocaleString();
+        console.log("typeof: " + typeof USD);
+        console.log("USD variable: " + USD);
 
-        // Calculate amount in local currency
-        var $amountToBring = $("<p>").text(result + " " + currencyName).addClass("white-text");
+        if (isNaN(USD)) {
+            $("#modal2").modal();
+            $("#modal2").modal('open');
+            $("#money").val("");
 
-        // Print to DOM
-        $("#result").append($amountToBring);
+            // Reset Result DOM
+            var $p = $("<p>").text("How much to bring.").addClass("white-text").addClass("rate");
+            $("#result").empty();
+            $("#result").append($p);
+        } else {
+            // Calcualted result
+            var result = Math.round(USD * currentRate.replace(",", "")).toLocaleString();
 
-        // Clear user input
-        $("#money").val("");
+            // Calculate amount in local currency
+            var $amountToBring = $("<p>").text("Bring: " + result + " " + currencyName).addClass("white-text");
+
+            // Print to DOM
+            $("#result").append($amountToBring).addClass("rate");
+
+            // Clear user input
+            $("#money").val("");
+        }
 
     });
 
@@ -190,10 +209,16 @@ $(document).ready(function () {
             url: translateURL,
             method: "GET"
         }).then(function (response) {
-            var $engPhrase = $("<p>").text(phrases[index]);
-            var $translatedPhrase = $("<p>").text(response.text);
+            var $div = $("<div>");
+            var $br = $("<br>");
+            var $p = $("<p>");
+            var $hr = $("<hr>");
+            var $engPhrase = $("<span>").text(phrases[index]).addClass("phrase").addClass("it");
+            var $translatedPhrase = $("<span>").text(response.text).addClass("phrase");
+
+            var $phraseGroup = ($p).append($engPhrase).append($br).append($translatedPhrase).append($hr);
             
-            $("#phrases").append($engPhrase).append($translatedPhrase);
+            $("#phrases").append($phraseGroup);
 
         });
     }

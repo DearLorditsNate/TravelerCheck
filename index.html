@@ -6,153 +6,151 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Traveler Check | Main Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Materialize CSS-->
+  <!-- Materialize CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<!-- Css -->
+  <!-- Css -->
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-<!-- google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700|Ubuntu:700" rel="stylesheet">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700|Ubuntu:700|Poppins" rel="stylesheet">
 </head>
 
 
 
 <body>
-<!-- Start container -->
-  <div class="container transparency">
-<!-- Header Row -->
-    <div class="row header-row">
-      <div class="row s12">
-<!-- Search Bar -->
-        <form class="center-align">
-          <div class="form-group">
-            <input type="text" class="form-control z-depth-3 notransparency" id="city" placeholder="Where are you going?">
+  <!-- Header Row -->
+  <div class="row header-img">
+    <h1>traveler check</h1>
+    <div class="col s12 center-align">
+      <!-- Search Bar -->
+
+      <div class="row">
+        <form>
+          <div class="form-group valign-wrapper">
+            <div class="col s8">
+              <input type="text" class="form-control z-depth-3 right" id="city" placeholder="Where are you going?">
+            </div>
+            <div class="col s4">
+              <button type="submit" class="btn left" id="search">Submit</button>
+            </div>
           </div>
-          <button type="submit" class="btn" id="search">Submit</button>
         </form>
       </div>
     </div>
+  </div>
 
-    <!-- Location Row -->
-    <div class="row">
-      <div class="col s12 center-align">
-        <h3 id="location"></h3>
+  <!-- Location Row -->
+  <div class="row">
+    <div class="col s12 center-align">
+      <h3 id="location"></h3>
+    </div>
+  </div>
+
+  <!-- Content Row -->
+  <div class="row white">
+    <!-- Content Left -->
+    <!-- Currency -->
+    <div class="col s4"><span class="sub-head">EXCHANGE RATE (To $1 USD)</span>
+      <div class="card medium z-depth-4 card-bg center-align">
+        <span class="white-text" id="currency">
+          <p class="rate">Current exchange rate.</p>
+        </span>
+        <!-- Search Bar -->
+        <div class="form-group">
+          <input type="text" class="form-control z-depth-4" id="money" placeholder="How much USD do you want to bring?">
+        </div>
+        <button type="submit" class="btn" id="convert">Submit</button>
+        <!-- Result -->
+        <span class="white-text" id="result">
+          <p class="rate">How much to bring.</p>
+        </span>
       </div>
     </div>
 
-<!-- Location Row -->
-    <div class="row">
-      <div class="col s12 center-align">
-        <h3 id="location"></h3>
+    <!-- Phrases -->
+    <div class="col s5"><span class="sub-head">HELPFUL PHRASES</span>
+      <div class="card medium z-depth-4 card-bg valign-wrapper">
+        <span class="white-text" id="phrases">
+          <p class="white-text rate">Learn some helpful pharases for when you arrive!</p>
+        </span>
       </div>
     </div>
 
-
-
-<!-- Content Row -->
-    <div class="row">
-      <!-- Content Left -->
-      <!-- Currency -->
-      <div class="col s4">
-        <p class="center-align">CURRENCY (Current rate to $1 USD)</p>
-        <div class="card medium z-depth-4 test1 notransparency">
-          <p class="white-text">
-            <span class="white-text" id="currency">
-            </span>
-          </p>
-          <div class="form-group">
-            <input type="text" class="form-control z-depth-4 notransparency" id="money" placeholder="How much $ do you want to bring?">
-          </div>
-          <button type="submit" class="btn" id="convert">Submit</button>
-          <div id="result"></div>
-        </div>
-      </div>
-
-      <!-- Phrases -->
-      <div class="col s5">
-        <p class="center-align">HELPFUL PHRASES:</p>
-        <div class="card medium z-depth-4 test2 notransparency">
-          <p class="white-text">
-            <span class="white-text" id="phrases">
-            </span>
-          </p>
-        </div>
-      </div>
-
-
-
-<!-- Content Right -->
-<!-- WEATHER -->
-
-      <div class="col s3 wea">
-
-
-        <p class="center-align">LOCAL WEATHER</p>
-        <div class="card card-panel medium z-depth-4 test3 notransparency">
-          
-
-<!-- Description -->
-          <div class="row">
-            <div class="col s12">
+    <!-- Content Right -->
+    <!-- WEATHER -->
+    <div class="col s3"><span class="sub-head">LOCAL WEATHER</span>
+      <div class="card card-panel medium z-depth-4 card-bg">
+        <!-- Description -->
+        <div class="row">
+          <div class="col s12">
             <span>
-              <h6 class="white-text center-align"  id="description"></h6>
+              <h6 class="white-text center-align" id="description"></h6>
             </span>
           </div>
         </div>
-<!-- Weather Icon -->
-          <div class="row">
-              <div class="col s6">
+        <!-- Weather Icon -->
+        <div class="row">
+          <div class="col s6">
             <div class="left-align" id="icon">
+            </div>
           </div>
-        </div>
-
-<!-- Temperature -->
+          <!-- Temperature -->
           <div class="col s6">
             <span>
-                <h5 class="white-text right-align" id="temperature"></h5>
+              <h5 class="white-text right-align" id="temperature"></h5>
             </span>
           </div>
         </div>
-
-<!-- Temperature Maximum-->
-<div class="row">
-    <span class="white-text left-align" id="temperature-max">
-    </span>
-    </div>
-
-
-<!-- Temperature Minumum-->
-<div class="row">
-    <span class="white-text left-align" id="temperature-min">
-    </span>
-    </div>
-<!-- Humidity -->
+        <!-- Temperature Maximum-->
         <div class="row">
-            <span class="white-text left-align" id="humidity">
-            </span>
-  
+          <span class="white-text left-align" id="temperature-max">
+          </span>
+        </div>
+        <!-- Temperature Minumum-->
+        <div class="row">
+          <span class="white-text left-align" id="temperature-min">
+          </span>
+        </div>
+        <!-- Humidity -->
+        <div class="row">
+          <span class="white-text left-align" id="humidity">
+          </span>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- 404 Error Modal -->
+  <div id="modal1" class="modal center-align">
+    <div class="modal-content">
+      <h4>We couldn't find the place you were looking for!</h4>
+      <p>Try entering just the name of the city you want to visit.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+  <!-- Number Error Modal -->
+  <div id="modal2" class="modal center-align">
+    <div class="modal-content">
+      <h4>We couldn't calculate that!</h4>
+      <p>Make sure you entered a number.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
 
 
 
-
-
-
-
-<!-- Moment JS  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone.min.js"></script> -->
-
-
-<!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<!-- Materialize JS -->
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- Currency Codes -->
+  <!-- Currency Codes -->
   <script src="assets/javascript/currency_codes.js"></script>
-<!-- Javascript -->
+  <!-- Javascript -->
   <script src="assets/javascript/app.js"></script>
 
 </body>

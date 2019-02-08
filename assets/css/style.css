@@ -1,35 +1,44 @@
 body {
-    background-image: url("../images/bgM.jpeg");
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #114B5F;
+}
+
+.header-img {
+ background-image: url("../images/AdobeStock_14921374.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 120%;
-    font-family: 'Ubuntu', sans-serif;
-    font-family: 'Stardos Stencil', cursive;
+    padding: 20px;
 }
 
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: -10px;
+    color: white;
+    text-shadow: 1px 1px 2px #114B5F;
+}
 
+.sub-head {
+    font-size: 20px;
+}
+
+.it {
+    font-style: italic;
+}
+
+.rate {
+    font-size: 30px;
+}
+
+.phrase {
+    font-size: 20px;
+}
 
 #location {
-    font-family: 'Stardos Stencil', cursive;
-    margin-bottom: 100px;
-    color: #32383E;
+    font-family: 'Poppins', sans-serif;
+    color: #114B5F;
 }
-
-
-
-.transparency {
-    background-color: white; 
-    size: auto;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-
-
-.notransparency {
-    background-color: white;
-}
-
-
 
 form {
     margin-top: 50px;
@@ -39,72 +48,40 @@ form {
 #money {
     border-radius: 40px;
     padding: 10px;
-    margin-top: 30px;
-    margin-bottom: 10px;
     max-width: 60%;
     background-color: white;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-    opacity: 1;
+    font-size: 30px;
 }
-
-
 
 #money {
-    border-radius: 40px;
-    margin-top: 30px;
-    margin-bottom: 10px;
     max-width: 95%;
-    background-color: white;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 15px;
-    opacity: 1;
-    float: center;
+    font-size: 20px;
 }
 
-#placeholder {
-    color: gray;
-}
-
-#search,
-#convert {
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
+#search {
+    width: 125px;
+    height: 65px;
+    font-size: 18px;
     border-radius: 40px;
-    background-color: rgb(4, 174, 253);
+    background-color: #297373;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
 }
-
-
 
 #convert {
     width: 72px;
     height: 40px;
     font-size: 10px;
     border-radius: 40px;
-    background-color: rgb(4, 174, 253);
+    background-color: #297373;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     }
 
-
-
-.test1 {
-    background-color: turquoise;
-}
-
-
-
-.test2 {
-    background-color: cornflowerblue;
-}
-
-
-
-.test3 {
-    background-color: slateblue;
+.card-bg {
+    background-color: #FF8966;
+    padding: 15px;
 }
